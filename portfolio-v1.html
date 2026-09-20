@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <title>Portfolio V1 — Projects — Cody</title>
+  <link href="assets/atomattr/dist/assets/index-DStjo_oU.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/remixicon/remixicon.css" />
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/atomattr/dist/assets/index-DqZ65fpu.js"></script>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body bg="grey-50" dark-bg="grey-950" data-project-id="portfolio-v1">
+  <header py="4" px="4" md-px="12" lg-px="16" w="full" display="flex" fixed top="0" left="0" z="50">
+    <nav p="2" md-p="3" bg="#fff/50" dark-bg="#000/50" backdrop-blur="4px" rounded="full" display="flex" justify="between" w="full" relative>
+      <a href="index.html" display="flex" items="center" gap="2">
+        <img src="assets/images/avatar.png" w="9" h="9" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+        <span display="none" md-display="flex" text="text" font-size="lg" font-weight="700">Cody</span>
+      </a>
+
+      <div gap="1" display="none" md-display="flex" items="center">
+        <a href="about.html" py="2" px="3" font-size="md" display="flex" items="center">About</a>
+        <a href="projects.html" py="2" px="3" font-size="md" display="flex" items="center" text="blue-900" dark-text="blue-500" font-weight="600">Projects</a>
+        <a href="blog.html" py="2" px="3" font-size="md" display="flex" items="center">Blog</a>
+        <a href="contact.html" py="2" px="3" font-size="md" display="flex" items="center">Contact</a>
+      </div>
+
+      <div display="flex" items="center" gap="2">
+        <button id="theme-toggle" type="button" display="flex" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="theme-icon-light" class="ri-sun-line" font-size="lg"></i>
+          <i id="theme-icon-dark" class="ri-moon-line" font-size="lg" display="none"></i>
+        </button>
+
+        <button id="menu-toggle" type="button" display="flex" md-display="none" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="menu-icon-open" class="ri-menu-3-line" font-size="lg"></i>
+          <i id="menu-icon-close" class="ri-close-line" font-size="lg" display="none"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" display="none" md-display="none" absolute top="100%" left="0" mt="2" w="full" bg="#fff" dark-bg="grey-950" rounded="2xl" p="2" flex-col gap="1" shadow="lg">
+        <a href="about.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">About</a>
+        <a href="projects.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Projects</a>
+        <a href="blog.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Blog</a>
+        <a href="contact.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Back link -->
+  <div px="4" md-px="12" lg-px="16" pt="24" display="flex">
+    <a href="projects.html" display="flex" items="center" gap="2" text="grey-500" hover-text="blue-900" dark-hover-text="blue-500" font-size="sm" font-weight="600">
+      <i class="ri-arrow-left-line" font-size="lg"></i> Back to projects
+    </a>
+  </div>
+
+  <!-- Hero: main image + name/details. Stacked on mobile, side-by-side on desktop -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col>
+    <div grid md-grid-cols="9" gap="8" md-gap="12" w="full" items="center">
+
+      <div md-col-span="5" rounded="3xl" bg="teal-500" h="20rem" md-h="28rem" overflow="hidden">
+        <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover">
+      </div>
+
+      <div md-col-span="4" display="flex" flex-col gap="4">
+        <span text="blue-900" dark-text="blue-500" font-size="sm" font-weight="700" tracking="0.1">PERSONAL WEBSITE</span>
+        <h1 font-size="2xl" md-font-size="3xl" font-weight="700">Portfolio V1</h1>
+        <p text="grey-600" dark-text="grey-400" md-font-size="lg">
+          My first personal portfolio — the site that started it all, before Atomattr existed.
+        </p>
+
+        <div display="flex" gap="2" wrap>
+          <span rounded="full" border="1px" border-color="grey-200" dark-border-color="grey-800" px="3" py="1" font-size="sm">Web</span>
+          <span rounded="full" border="1px" border-color="grey-200" dark-border-color="grey-800" px="3" py="1" font-size="sm">Portfolio</span>
+        </div>
+
+        <div display="flex" gap="3" mt="2" wrap>
+          <a href="#" target="_blank" display="flex" items="center" gap="2" bg="blue-900" dark-bg="blue-600" text="#fff" font-weight="600" px="5" py="2.5" rounded="full">
+            Visit site <i class="ri-arrow-right-up-line" font-size="lg"></i>
+          </a>
+          <a href="https://github.com/devadetayo" target="_blank" display="flex" items="center" gap="2" border="1.5px" border-color="grey-200" dark-border-color="grey-800" font-weight="600" px="5" py="2.5" rounded="full">
+            <i class="ri-github-fill" font-size="lg"></i> Code
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <div
+    py="8"
+    px="4"
+    md-px="12"
+    lg-px="16"
+    display="flex"
+    flex-col
+    w="full"
+  >
+    <div
+      display="flex"
+      flex-col
+      gap="2"
+      py="6"
+      mb="6"
+      border-b="1px"
+      border-color="grey-200"
+      dark-border-color="grey-800"
+      w="full"
+    >
+      <h3
+        text="text"
+        font-size="xl"
+        md-font-size="2xl"
+        font-weight="700"
+        tracking="0.3"
+      >
+        Gallery
+      </h3>
+    </div>
+
+    <!-- Mobile gallery -->
+    <div
+      display="flex"
+      md-display="none"
+      gap="4"
+      overflow-x="auto"
+      overflow-y="hidden"
+      no-wrap
+      pb="3"
+      w="full"
+      style="scroll-snap-type: x mandatory;"
+    >
+      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="grey-100" dark-bg="grey-900" style="scroll-snap-align: start;">
+        <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover">
+      </div>
+      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="grey-100" dark-bg="grey-900" style="scroll-snap-align: start;">
+        <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover">
+      </div>
+      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="grey-100" dark-bg="grey-900" style="scroll-snap-align: start;">
+        <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover">
+      </div>
+      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="grey-100" dark-bg="grey-900" style="scroll-snap-align: start;">
+        <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover">
+      </div>
+    </div>
+
+    <!-- Desktop gallery -->
+    <div
+      display="none"
+      md-display="flex"
+      gap="6"
+      overflow-x="auto"
+      overflow-y="hidden"
+      flex-wrap="nowrap"
+      pb="3"
+      scroll-snap-type="x mandatory"
+      w="full"
+    >
+      <div flex="1" display="flex" w="52rem" h="27rem" rounded="2xl" overflow="hidden" bg="grey-100" dark-bg="grey-900" style="scroll-snap-align: start;">
+        <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover">
+      </div>
+      <div flex="1" display="flex" w="52rem" h="27rem" rounded="2xl" overflow="hidden" bg="grey-100" dark-bg="grey-900" style="scroll-snap-align: start;">
+        <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover">
+      </div>
+      <div flex="1" display="flex" w="52rem" h="27rem" rounded="2xl" overflow="hidden" bg="grey-100" dark-bg="grey-900" style="scroll-snap-align: start;">
+        <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover">
+      </div>
+      <div flex="1" display="flex" w="52rem" h="27rem" rounded="2xl" overflow="hidden" bg="grey-100" dark-bg="grey-900" style="scroll-snap-align: start;">
+        <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover">
+      </div>
+    </div>
+  </div>
+
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col w="full">
+    <div display="flex" flex-col gap="2" py="6" mb="6" border-b="1px" border-color="grey-200" dark-border-color="grey-800" w="full">
+      <h3 text="text" font-size="xl" md-font-size="2xl" font-weight="700" tracking="0.3">About this project</h3>
+    </div>
+
+    <p w="full" md-font-size="lg" text="grey-600" dark-text="grey-400" leading="1.8rem">
+      My first portfolio site, built to show early projects and design work. It laid the groundwork for how I think about presenting my own work online, and a lot of the layout instincts from it carried into later versions.
+    </p>
+  </div>
+
+  <!-- Built with -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col pb="16">
+    <div display="flex" flex-col gap="2" py="6" mb="6" border-b="1px" border-color="grey-200" dark-border-color="grey-800" w="full">
+      <h3 text="text" font-size="xl" md-font-size="2xl" font-weight="700" tracking="0.3">Built with</h3>
+    </div>
+    <div display="flex" gap="2" wrap>
+      <span rounded="full" border="1px" border-color="grey-200" dark-border-color="grey-800" px="4" py="2" font-size="sm" font-weight="600">HTML</span>
+      <span rounded="full" border="1px" border-color="grey-200" dark-border-color="grey-800" px="4" py="2" font-size="sm" font-weight="600">CSS</span>
+      <span rounded="full" border="1px" border-color="grey-200" dark-border-color="grey-800" px="4" py="2" font-size="sm" font-weight="600">JavaScript</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col md-flex-row justify="between" items="center" gap="4" border-t="1px" border-color="grey-200" dark-border-color="grey-800" mt="8">
+    <div display="flex" items="center" gap="2">
+      <img src="assets/images/avatar.png" w="8" h="8" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+      <span text="text" font-size="md" font-weight="600">Cody</span>
+    </div>
+
+    <p text="grey-500" font-size="md">&copy; <span id="year"></span> Cody. All rights reserved.</p>
+
+    <div display="flex" gap="4">
+      <a href="https://github.com/devadetayo" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-github-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://linkedin.com/in/devadetayo" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-linkedin-box-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://x.com/devadetayo" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-twitter-x-fill" font-size="2xl"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Floating stats bar: view count, clickable like, year, share -->
+  <div
+    fixed
+    bottom="6"
+    left="50%"
+    transform="translateX(-50%)"
+    z="40"
+    display="flex"
+    items="center"
+    gap="1"
+    bg="#fff/70"
+    dark-bg="#000/70"
+    backdrop-blur="8px"
+    rounded="full"
+    px="2"
+    py="2"
+    shadow="lg"
+    *border*="1px"
+    border-color="grey-200"
+    dark-border-color="grey-800"
+  >
+    <div display="flex" items="center" gap="2" px="3" py="1.5" font-size="sm" font-weight="600" text="grey-600" dark-text="grey-300">
+      <i class="ri-eye-line" font-size="lg"></i>
+      <span id="view-count">0</span>
+    </div>
+
+    <div w="1px" h="1.25rem" bg="grey-200" dark-bg="grey-800"></div>
+
+    <button
+      id="like-btn"
+      type="button"
+      display="flex"
+      items="center"
+      gap="2"
+      px="3"
+      py="1.5"
+      rounded="full"
+      *border*="none"
+      bg="transparent"
+      cursor="pointer"
+      font-size="sm"
+      font-weight="600"
+      text="grey-600"
+      dark-text="grey-300"
+    >
+      <i id="like-icon" class="ri-heart-line" font-size="lg"></i>
+      <span id="like-count">0</span>
+    </button>
+
+    <div w="1px" h="1.25rem" bg="grey-200" dark-bg="grey-800"></div>
+
+    <div display="flex" items="center" gap="2" px="3" py="1.5" font-size="sm" font-weight="600" text="grey-600" dark-text="grey-300">
+      <i class="ri-calendar-line" font-size="lg"></i>
+      <span>2026</span>
+    </div>
+
+    <div w="1px" h="1.25rem" bg="grey-200" dark-bg="grey-800"></div>
+
+    <button
+      id="share-btn"
+      type="button"
+      display="flex"
+      items="center"
+      gap="2"
+      px="3"
+      py="1.5"
+      rounded="full"
+      *border*="none"
+      bg="transparent"
+      cursor="pointer"
+      font-size="sm"
+      font-weight="600"
+      text="grey-600"
+      dark-text="grey-300"
+    >
+      <i class="ri-share-forward-line" font-size="lg"></i>
+      <span id="share-label">Share</span>
+    </button>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const iconLight = document.getElementById('theme-icon-light');
+    const iconDark = document.getElementById('theme-icon-dark');
+
+    function syncThemeIcon() {
+      const isDark = html.classList.contains('dark');
+      iconLight.setAttribute('display', isDark ? 'none' : 'flex');
+      iconDark.setAttribute('display', isDark ? 'flex' : 'none');
+    }
+    syncThemeIcon();
+
+    themeToggle.addEventListener('click', function () {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      syncThemeIcon();
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    let menuOpen = false;
+
+    function setMenu(open) {
+      menuOpen = open;
+      mobileMenu.setAttribute('display', open ? 'flex' : 'none');
+      menuIconOpen.setAttribute('display', open ? 'none' : 'flex');
+      menuIconClose.setAttribute('display', open ? 'flex' : 'none');
+    }
+
+    menuToggle.addEventListener('click', function () {
+      setMenu(!menuOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMenu(false);
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (menuOpen && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        setMenu(false);
+      }
+    });
+  </script>
+
+  <!--
+    View / like / share counters — real numbers, starting at 0, stored in
+    localStorage on THIS visitor's browser.
+
+    "Realtime" here means: every open tab/window of this page on the same
+    browser updates instantly via the storage event + BroadcastChannel,
+    with no refresh needed — like clicked in one tab shows up in another
+    immediately.
+
+    What this can't do: show one shared number across DIFFERENT visitors'
+    browsers. There's no reliable free hosted counter service left (the
+    old countapi.xyz shut down and its unofficial replacements aren't
+    something to depend on for a live portfolio). Real cross-visitor
+    counts need a small backend endpoint this script can call instead of
+    localStorage — happy to build that when you're ready for it.
+  -->
+  <script>
+    (function () {
+      const projectId = document.body.getAttribute('data-project-id') || 'project';
+      const viewKey = 'views:' + projectId;
+      const likeCountKey = 'likeCount:' + projectId;
+      const likedKey = 'liked:' + projectId;
+
+      const viewEl = document.getElementById('view-count');
+      const likeEl = document.getElementById('like-count');
+      const likeBtn = document.getElementById('like-btn');
+      const likeIcon = document.getElementById('like-icon');
+      const shareBtn = document.getElementById('share-btn');
+      const shareLabel = document.getElementById('share-label');
+
+      const channel = ('BroadcastChannel' in window) ? new BroadcastChannel('stats:' + projectId) : null;
+
+      function formatCount(n) {
+        if (n >= 1000) return (n / 1000).toFixed(n >= 10000 ? 0 : 1) + 'k';
+        return String(n);
+      }
+
+      function readViews() {
+        const v = parseInt(localStorage.getItem(viewKey), 10);
+        return isNaN(v) ? 0 : v;
+      }
+      function readLikeCount() {
+        const v = parseInt(localStorage.getItem(likeCountKey), 10);
+        return isNaN(v) ? 0 : v;
+      }
+      function readLiked() {
+        return localStorage.getItem(likedKey) === '1';
+      }
+
+      function renderViews() {
+        viewEl.textContent = formatCount(readViews());
+      }
+      function renderLike() {
+        const liked = readLiked();
+        likeEl.textContent = formatCount(readLikeCount());
+        likeIcon.className = liked ? 'ri-heart-fill' : 'ri-heart-line';
+        likeIcon.setAttribute('text', liked ? 'red-500' : '');
+      }
+
+      // Count this visit once per tab session
+      let views = readViews();
+      const alreadyViewedThisLoad = sessionStorage.getItem('viewed:' + projectId);
+      if (!alreadyViewedThisLoad) {
+        views += 1;
+        localStorage.setItem(viewKey, String(views));
+        sessionStorage.setItem('viewed:' + projectId, '1');
+        if (channel) channel.postMessage({ type: 'views' });
+      }
+      renderViews();
+      renderLike();
+
+      likeBtn.addEventListener('click', function () {
+        const liked = !readLiked();
+        let count = readLikeCount() + (liked ? 1 : -1);
+        localStorage.setItem(likedKey, liked ? '1' : '0');
+        localStorage.setItem(likeCountKey, String(count));
+        renderLike();
+        if (channel) channel.postMessage({ type: 'like' });
+      });
+
+      // Live-sync across every open tab of this page on this browser
+      window.addEventListener('storage', function (e) {
+        if (e.key === viewKey) renderViews();
+        if (e.key === likeCountKey || e.key === likedKey) renderLike();
+      });
+      if (channel) {
+        channel.addEventListener('message', function () {
+          renderViews();
+          renderLike();
+        });
+      }
+
+      shareBtn.addEventListener('click', async function () {
+        const shareData = { title: document.title, url: window.location.href };
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+          } else {
+            await navigator.clipboard.writeText(shareData.url);
+            const original = shareLabel.textContent;
+            shareLabel.textContent = 'Copied!';
+            setTimeout(function () { shareLabel.textContent = original; }, 1500);
+          }
+        } catch (err) {
+          // user cancelled share — no-op
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
