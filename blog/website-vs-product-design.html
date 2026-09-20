@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <title>The Difference Between Designing a Website and Designing a Product — Cody</title>
+  <link href="assets/atomattr/dist/assets/index-DStjo_oU.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/remixicon/remixicon.css" />
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/atomattr/dist/assets/index-DqZ65fpu.js"></script>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body bg="grey-50" dark-bg="grey-950">
+  <header py="4" px="4" md-px="12" lg-px="16" w="full" display="flex" fixed top="0" left="0" z="50">
+    <nav p="2" md-p="3" bg="#fff/50" dark-bg="#000/50" backdrop-blur="4px" rounded="full" display="flex" justify="between" w="full" relative>
+      <a href="index.html" display="flex" items="center" gap="2">
+        <img src="assets/images/avatar.png" w="9" h="9" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+        <span display="none" md-display="flex" text="text" font-size="lg" font-weight="700">Cody</span>
+      </a>
+
+      <div gap="1" display="none" md-display="flex" items="center">
+        <a href="about.html" py="2" px="3" font-size="md" display="flex" items="center">About</a>
+        <a href="projects.html" py="2" px="3" font-size="md" display="flex" items="center">Projects</a>
+        <a href="blog.html" py="2" px="3" font-size="md" display="flex" items="center" text="blue-900" dark-text="blue-500" font-weight="600">Blog</a>
+        <a href="contact.html" py="2" px="3" font-size="md" display="flex" items="center">Contact</a>
+      </div>
+
+      <div display="flex" items="center" gap="2">
+        <button id="theme-toggle" type="button" display="flex" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="theme-icon-light" class="ri-sun-line" font-size="lg"></i>
+          <i id="theme-icon-dark" class="ri-moon-line" font-size="lg" display="none"></i>
+        </button>
+
+        <button id="menu-toggle" type="button" display="flex" md-display="none" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="menu-icon-open" class="ri-menu-3-line" font-size="lg"></i>
+          <i id="menu-icon-close" class="ri-close-line" font-size="lg" display="none"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" display="none" md-display="none" absolute top="100%" left="0" mt="2" w="full" bg="#fff" dark-bg="grey-950" rounded="2xl" p="2" flex-col gap="1" shadow="lg">
+        <a href="about.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">About</a>
+        <a href="projects.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Projects</a>
+        <a href="blog.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Blog</a>
+        <a href="contact.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Post header -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div w="full" mt="24" max-w="42rem" align="left">
+      <a href="blog.html" display="flex" items="center" gap="2" text="grey-500" hover-text="blue-900" dark-hover-text="blue-500" font-size="sm" font-weight="600" mb="8">
+        <i class="ri-arrow-left-line"></i> Back to blog
+      </a>
+
+      <span display="flex" items="center" gap="2" text="blue-900" dark-text="blue-500" font-size="sm" font-weight="700">
+        <i class="ri-shape-2-line" font-size="md"></i> Design
+      </span>
+      <h3 font-size="3xl" md-font-size="4xl" font-weight="700" mt="3" mb="4" leading="2.5rem">The Difference Between Designing a Website and Designing a Product</h3>
+      <p text="grey-500" font-size="sm" mb="8">4–6 min read</p>
+      <div w="full" h="16rem" rounded="2xl" bg="blue-50" dark-bg="grey-800" text="blue-900" dark-text="blue-500" display="flex" items="center" justify="center" overflow="hidden"><svg viewBox="0 0 320 240" w="60%" h="60%" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="62" y="64" width="150" height="104" rx="12"/>
+      <path d="M62 90 L212 90" />
+      <rect x="146" y="100" width="150" height="104" rx="12"/>
+      <path d="M146 126 L296 126" />
+      <circle cx="80" cy="77" r="3"/>
+      <circle cx="164" cy="113" r="3"/>
+    </svg></div>
+    </div>
+  </div>
+
+  <!-- Post body -->
+  <div py="4" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div w="full" max-w="42rem" align="left">
+      <p mb="6" md-font-size="lg">A website and a product can both be built with HTML, CSS, JavaScript, and a modern framework.</p>
+      <p mb="6" md-font-size="lg">They can both look polished.</p>
+      <p mb="6" md-font-size="lg">They can both have animations, responsive layouts, beautiful typography, and carefully designed components.</p>
+      <p mb="6" md-font-size="lg">But they are fundamentally different problems.</p>
+      <p mb="6" md-font-size="lg">A website often needs to communicate.</p>
+      <p mb="6" md-font-size="lg">A product needs to help someone accomplish something.</p>
+      <p mb="6" md-font-size="lg">That difference changes almost everything.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Websites can focus on presentation</h4>
+      <p mb="6" md-font-size="lg">A marketing website might have a hero section, feature sections, testimonials, pricing, FAQs, and a contact form.</p>
+      <p mb="6" md-font-size="lg">Its primary job is often to communicate a message and guide visitors toward an action.</p>
+      <p mb="6" md-font-size="lg">The designer has significant control over the experience because the content is mostly known.</p>
+      <p mb="6" md-font-size="lg">Products are less predictable.</p>
+      <p mb="6" md-font-size="lg">Users create data. They make mistakes. They arrive from different places. They use different devices. They perform actions in different orders. They encounter empty states and errors.</p>
+      <p mb="6" md-font-size="lg">That unpredictability is where product design gets complicated.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">A product has memory</h4>
+      <p mb="6" md-font-size="lg">A product remembers things.</p>
+      <p mb="6" md-font-size="lg">A user might save a property today and return next week. They might start a form and finish it later. They might receive a notification and open the related screen from there. They might search for something repeatedly.</p>
+      <p mb="6" md-font-size="lg">The interface therefore cannot be designed as a collection of isolated screens.</p>
+      <p mb="6" md-font-size="lg">Each screen exists inside a larger system.</p>
+      <p mb="6" md-font-size="lg">That means state becomes part of the design.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">User flows matter more than isolated screens</h4>
+      <p mb="6" md-font-size="lg">Imagine designing a property details page.</p>
+      <p mb="6" md-font-size="lg">It might look great on its own.</p>
+      <p mb="6" md-font-size="lg">But what happens when the user gets there?</p>
+      <p mb="6" md-font-size="lg">Maybe they came from search. Maybe they came from a saved listing. Maybe they opened a notification. Maybe someone shared the property with them. Maybe the property is no longer available. Maybe they want to contact the agent. Maybe they want to schedule a tour.</p>
+      <p mb="6" md-font-size="lg">Each path creates slightly different requirements.</p>
+      <p mb="6" md-font-size="lg">This is why product design has to think in flows rather than screenshots.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Edge cases are part of the product</h4>
+      <p mb="6" md-font-size="lg">One of the biggest mistakes I see in product development is treating edge cases as something to solve later.</p>
+      <p mb="6" md-font-size="lg">Later usually arrives when the application is already being used.</p>
+      <p mb="6" md-font-size="lg">Then the problems become obvious.</p>
+      <p mb="6" md-font-size="lg">What does a screen show when there are no results? What happens if the network disappears? What if an image fails? What if the user enters invalid information? What if the user's session expires? What if a listing gets removed while someone is viewing it?</p>
+      <p mb="6" md-font-size="lg">These aren't rare technical annoyances.</p>
+      <p mb="6" md-font-size="lg">They are normal product conditions.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Components need context</h4>
+      <p mb="6" md-font-size="lg">Another lesson is that reusable components should be designed around real patterns.</p>
+      <p mb="6" md-font-size="lg">It is easy to create a generic component with dozens of options.</p>
+      <p mb="6" md-font-size="lg">But eventually the API becomes difficult to understand.</p>
+      <p mb="6" md-font-size="lg">A component should have a clear responsibility.</p>
+      <p mb="6" md-font-size="lg">A property card should understand what makes a property card useful. A search input should understand searching. A notification item should communicate an event.</p>
+      <p mb="6" md-font-size="lg">The goal isn't maximum reuse.</p>
+      <p mb="6" md-font-size="lg">The goal is useful reuse.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Product design includes backend reality</h4>
+      <p mb="6" md-font-size="lg">This is one of the biggest differences.</p>
+      <p mb="6" md-font-size="lg">A website can sometimes be designed before the underlying data structure is finalized.</p>
+      <p mb="6" md-font-size="lg">A product cannot ignore it for long.</p>
+      <p mb="6" md-font-size="lg">The UI depends on the data. Data affects loading states. Permissions affect available actions. Authentication affects navigation. APIs affect error handling. Database structure can affect what information can be displayed.</p>
+      <p mb="6" md-font-size="lg">This means product design is naturally connected to engineering.</p>
+      <p mb="6" md-font-size="lg">The frontend developer needs to understand enough of the system behind the interface to make good decisions.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">The interface has to survive real usage</h4>
+      <p mb="6" md-font-size="lg">A product is not finished when the happy path works.</p>
+      <p mb="6" md-font-size="lg">It is finished when the common paths and important failure cases have been considered.</p>
+      <p mb="6" md-font-size="lg">That mindset changed how I approach projects.</p>
+      <p mb="6" md-font-size="lg">Instead of asking only "does this screen look good?", I increasingly ask what happens before this, what happens after this, what happens when it fails, what happens when there is no data, and what happens when the user comes back.</p>
+      <p mb="6" md-font-size="lg">Those questions uncover much more than visual inspection.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">The biggest shift</h4>
+      <p mb="6" md-font-size="lg">The biggest change in my thinking was realizing that product design is less about individual screens and more about systems.</p>
+      <p mb="6" md-font-size="lg">Typography is a system. Navigation is a system. Components are a system. Data is a system. States are a system. User flows are a system.</p>
+      <p mb="6" md-font-size="lg">When those systems work together, the interface feels natural.</p>
+      <p mb="6" md-font-size="lg">When they don't, even beautiful screens can feel awkward.</p>
+      <p mb="6" md-font-size="lg">That is why building products has changed the way I design.</p>
+      <p mb="6" md-font-size="lg">I still care about the visual layer. I probably care about it more than ever.</p>
+      <p mb="6" md-font-size="lg">But I now see visual design as one part of a much larger problem.</p>
+      <p mb="6" md-font-size="lg">A website can make a strong first impression.</p>
+      <p mb="6" md-font-size="lg">A product has to earn the user's trust every time they use it.</p>
+    </div>
+  </div>
+
+  <!-- Prev / next -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div w="full" max-w="42rem" display="flex" justify="between" gap="4" pt="8" border-t="1px" border-color="grey-200" dark-border-color="grey-800">
+      <a href="why-i-prefer-attribute-based-styling.html" display="flex" flex-col gap="1" max-w="45%">
+        <span text="grey-500" font-size="sm" display="flex" items="center" gap="1"><i class="ri-arrow-left-line"></i> Previous</span>
+        <span font-weight="600">Why I Prefer Attribute-Based Styling</span>
+      </a>
+      <a href="my-approach-to-building-simple-interfaces.html" display="flex" flex-col gap="1" align="right" max-w="45%">
+        <span text="grey-500" font-size="sm" display="flex" items="center" justify="end" gap="1">Next <i class="ri-arrow-right-line"></i></span>
+        <span font-weight="600">My Approach to Building Interfaces Without Overcomplicating Them</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA / Contact -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div rounded="3xl" bg="blue-900" dark-bg="blue-950" w="full" p="10" md-p="16" display="flex" flex-col items="center" align="center" gap="4">
+      <h3 text="#fff" font-size="3xl" md-font-size="5xl" font-weight="700" leading="2.5rem" md-leading="3.5rem">Let's work together.</h3>
+      <p text="#fff/80" font-size="base" md-font-size="lg" max-w="36rem">
+        Have a project in mind, or just want to talk shop about design systems? I'm always open to a good conversation.
+      </p>
+
+      <div display="flex" gap="4" mt="6" wrap justify="center">
+        <a href="mailto:adetayoinfo2004@gmail.com" display="flex" items="center" gap="2" bg="#fff" text="blue-900" font-weight="600" px="6" py="3" rounded="full">
+          <i class="ri-mail-line" font-size="lg"></i> Email me
+        </a>
+        <a href="contact.html" display="flex" items="center" gap="2" border="1.5px" border-color="#fff/40" text="#fff" font-weight="600" px="6" py="3" rounded="full">
+          Contact<i class="ri-arrow-right-up-line" font-size="lg"></i>
+        </a>
+      </div>
+
+      <div display="flex" gap="6" mt="8">
+        <a href="https://github.com/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-github-fill" font-size="2xl"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-linkedin-box-fill" font-size="2xl"></i>
+        </a>
+        <a href="https://twitter.com/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-twitter-x-fill" font-size="2xl"></i>
+        </a>
+        <a href="https://dribbble.com/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-dribbble-fill" font-size="2xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col md-flex-row justify="between" items="center" gap="4" border-t="1px" border-color="grey-200" dark-border-color="grey-800" mt="8">
+    <div display="flex" items="center" gap="2">
+      <img src="assets/images/avatar.png" w="8" h="8" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+      <span text="text" font-size="md" font-weight="600">Cody</span>
+    </div>
+
+    <p text="grey-500" font-size="md">&copy; <span id="year"></span> Cody. All rights reserved.</p>
+
+    <div display="flex" gap="4">
+      <a href="https://github.com/yourhandle" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-github-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-linkedin-box-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://twitter.com/yourhandle" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-twitter-x-fill" font-size="2xl"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const iconLight = document.getElementById('theme-icon-light');
+    const iconDark = document.getElementById('theme-icon-dark');
+
+    function syncThemeIcon() {
+      const isDark = html.classList.contains('dark');
+      iconLight.setAttribute('display', isDark ? 'none' : 'flex');
+      iconDark.setAttribute('display', isDark ? 'flex' : 'none');
+    }
+    syncThemeIcon();
+
+    themeToggle.addEventListener('click', function () {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      syncThemeIcon();
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    let menuOpen = false;
+
+    function setMenu(open) {
+      menuOpen = open;
+      mobileMenu.setAttribute('display', open ? 'flex' : 'none');
+      menuIconOpen.setAttribute('display', open ? 'none' : 'flex');
+      menuIconClose.setAttribute('display', open ? 'flex' : 'none');
+    }
+
+    menuToggle.addEventListener('click', function () {
+      setMenu(!menuOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMenu(false);
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (menuOpen && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        setMenu(false);
+      }
+    });
+  </script>
+</body>
+</html>

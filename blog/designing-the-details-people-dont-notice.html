@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <title>Designing the Details People Don't Notice — Cody</title>
+  <link href="assets/atomattr/dist/assets/index-DStjo_oU.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/remixicon/remixicon.css" />
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/atomattr/dist/assets/index-DqZ65fpu.js"></script>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body bg="grey-50" dark-bg="grey-950">
+  <header py="4" px="4" md-px="12" lg-px="16" w="full" display="flex" fixed top="0" left="0" z="50">
+    <nav p="2" md-p="3" bg="#fff/50" dark-bg="#000/50" backdrop-blur="4px" rounded="full" display="flex" justify="between" w="full" relative>
+      <a href="index.html" display="flex" items="center" gap="2">
+        <img src="assets/images/avatar.png" w="9" h="9" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+        <span display="none" md-display="flex" text="text" font-size="lg" font-weight="700">Cody</span>
+      </a>
+
+      <div gap="1" display="none" md-display="flex" items="center">
+        <a href="about.html" py="2" px="3" font-size="md" display="flex" items="center">About</a>
+        <a href="projects.html" py="2" px="3" font-size="md" display="flex" items="center">Projects</a>
+        <a href="blog.html" py="2" px="3" font-size="md" display="flex" items="center" text="blue-900" dark-text="blue-500" font-weight="600">Blog</a>
+        <a href="contact.html" py="2" px="3" font-size="md" display="flex" items="center">Contact</a>
+      </div>
+
+      <div display="flex" items="center" gap="2">
+        <button id="theme-toggle" type="button" display="flex" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="theme-icon-light" class="ri-sun-line" font-size="lg"></i>
+          <i id="theme-icon-dark" class="ri-moon-line" font-size="lg" display="none"></i>
+        </button>
+
+        <button id="menu-toggle" type="button" display="flex" md-display="none" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="menu-icon-open" class="ri-menu-3-line" font-size="lg"></i>
+          <i id="menu-icon-close" class="ri-close-line" font-size="lg" display="none"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" display="none" md-display="none" absolute top="100%" left="0" mt="2" w="full" bg="#fff" dark-bg="grey-950" rounded="2xl" p="2" flex-col gap="1" shadow="lg">
+        <a href="about.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">About</a>
+        <a href="projects.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Projects</a>
+        <a href="blog.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Blog</a>
+        <a href="contact.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Post header -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div w="full" mt="24" max-w="42rem" align="left">
+      <a href="blog.html" display="flex" items="center" gap="2" text="grey-500" hover-text="blue-900" dark-hover-text="blue-500" font-size="sm" font-weight="600" mb="8">
+        <i class="ri-arrow-left-line"></i> Back to blog
+      </a>
+
+      <span display="flex" items="center" gap="2" text="blue-900" dark-text="blue-500" font-size="sm" font-weight="700">
+        <i class="ri-shape-2-line" font-size="md"></i> Design
+      </span>
+      <h3 font-size="3xl" md-font-size="4xl" font-weight="700" mt="3" mb="4" leading="2.5rem">Designing the Details People Don't Notice</h3>
+      <p text="grey-500" font-size="sm" mb="8">4–6 min read</p>
+      <div w="full" h="16rem" rounded="2xl" bg="blue-50" dark-bg="grey-800" text="blue-900" dark-text="blue-500" display="flex" items="center" justify="center" overflow="hidden"><svg viewBox="0 0 320 240" w="60%" h="60%" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="132" y="92" width="56" height="56" rx="10"/>
+      <circle cx="160" cy="120" r="46" fill="none" stroke-dasharray="4 8" stroke-linecap="round"/>
+    </svg></div>
+    </div>
+  </div>
+
+  <!-- Post body -->
+  <div py="4" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div w="full" max-w="42rem" align="left">
+      <p mb="6" md-font-size="lg">Some of the most important parts of an interface are the parts users never talk about.</p>
+      <p mb="6" md-font-size="lg">Nobody usually says a focus state was beautifully implemented.</p>
+      <p mb="6" md-font-size="lg">Nobody sends a message because the empty state had perfect spacing.</p>
+      <p mb="6" md-font-size="lg">People don't celebrate a good loading skeleton.</p>
+      <p mb="6" md-font-size="lg">They simply experience the product as smooth, clear, and trustworthy.</p>
+      <p mb="6" md-font-size="lg">That is the interesting thing about details.</p>
+      <p mb="6" md-font-size="lg">The best ones often disappear.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Loading is part of the experience</h4>
+      <p mb="6" md-font-size="lg">A screen that suddenly goes blank while data loads feels broken.</p>
+      <p mb="6" md-font-size="lg">Even if the backend is working perfectly, the interface can communicate the opposite.</p>
+      <p mb="6" md-font-size="lg">Loading states create continuity.</p>
+      <p mb="6" md-font-size="lg">They tell the user that something is happening.</p>
+      <p mb="6" md-font-size="lg">The exact solution depends on the product. Sometimes a spinner is enough. Sometimes skeleton content makes more sense. Sometimes progressive loading is better.</p>
+      <p mb="6" md-font-size="lg">The important part is not the animation.</p>
+      <p mb="6" md-font-size="lg">It is communication.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Empty states need personality and direction</h4>
+      <p mb="6" md-font-size="lg">An empty screen can either feel like a dead end or a natural part of the experience.</p>
+      <p mb="6" md-font-size="lg">For example, a saved-items page with no saved items shouldn't simply look broken.</p>
+      <p mb="6" md-font-size="lg">The user should understand that nothing has been saved yet.</p>
+      <p mb="6" md-font-size="lg">When appropriate, the interface can suggest what to do next.</p>
+      <p mb="6" md-font-size="lg">This small detail can make a product feel much more complete.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Errors need good UX too</h4>
+      <p mb="6" md-font-size="lg">Errors are inevitable.</p>
+      <p mb="6" md-font-size="lg">Servers fail. Connections disappear. Users enter unexpected data. Third-party services stop responding.</p>
+      <p mb="6" md-font-size="lg">The interface cannot prevent every failure, but it can decide how the failure is communicated.</p>
+      <p mb="6" md-font-size="lg">A generic error message may technically be correct, but it doesn't always help.</p>
+      <p mb="6" md-font-size="lg">A useful error state should answer as much as possible: what happened, can I try again, did my action succeed, do I need to change something, and what should I do next.</p>
+      <p mb="6" md-font-size="lg">The goal isn't to hide failure.</p>
+      <p mb="6" md-font-size="lg">It is to make failure understandable.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Focus states matter</h4>
+      <p mb="6" md-font-size="lg">Focus states are easy to forget because mouse users may barely notice them.</p>
+      <p mb="6" md-font-size="lg">But keyboard users depend on them.</p>
+      <p mb="6" md-font-size="lg">A visible focus indicator tells the user where they are.</p>
+      <p mb="6" md-font-size="lg">It also communicates that the interface is interactive.</p>
+      <p mb="6" md-font-size="lg">Good focus design should fit the visual system without sacrificing visibility.</p>
+      <p mb="6" md-font-size="lg">This is a perfect example of a detail that can be almost invisible to one user and essential to another.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Micro-interactions create continuity</h4>
+      <p mb="6" md-font-size="lg">Small transitions can make interfaces feel connected.</p>
+      <p mb="6" md-font-size="lg">A card opening into details. A menu appearing from an action. A button changing state after a successful operation. A saved item visually confirming that it was saved.</p>
+      <p mb="6" md-font-size="lg">These interactions can reduce the mental gap between an action and its result.</p>
+      <p mb="6" md-font-size="lg">But they should be used carefully.</p>
+      <p mb="6" md-font-size="lg">If everything moves, nothing feels stable.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Forms reveal product quality quickly</h4>
+      <p mb="6" md-font-size="lg">Forms are one of the fastest ways to discover whether a product has been designed carefully.</p>
+      <p mb="6" md-font-size="lg">What happens when the user enters an invalid value? Does the error appear too late? Is the field still understandable? Does the keyboard behave correctly on mobile? Can the user tell which fields are required? Does submitting show feedback? Can the user recover from a mistake?</p>
+      <p mb="6" md-font-size="lg">A form that technically works can still be frustrating.</p>
+      <p mb="6" md-font-size="lg">A well-designed form reduces the amount of thinking required.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Buttons should communicate consequences</h4>
+      <p mb="6" md-font-size="lg">A button should not only look clickable.</p>
+      <p mb="6" md-font-size="lg">Its label should make sense.</p>
+      <p mb="6" md-font-size="lg">"Submit" is sometimes technically accurate but vague. "Create listing" tells the user more. "Save changes" communicates what will happen. "Delete account" communicates a serious consequence.</p>
+      <p mb="6" md-font-size="lg">The more meaningful the action, the more important the wording becomes.</p>
+      <p mb="6" md-font-size="lg">Visual hierarchy and language work together.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Consistency builds trust</h4>
+      <p mb="6" md-font-size="lg">If one button behaves one way on one screen and differently somewhere else, users have to relearn the product.</p>
+      <p mb="6" md-font-size="lg">The same applies to icons, spacing, dialogs, notifications, navigation, and form behavior.</p>
+      <p mb="6" md-font-size="lg">Consistency reduces cognitive load.</p>
+      <p mb="6" md-font-size="lg">It also makes a product feel more trustworthy.</p>
+      <p mb="6" md-font-size="lg">Users don't need to consciously understand the design system.</p>
+      <p mb="6" md-font-size="lg">They simply benefit from its predictability.</p>
+      <h4 font-size="xl" md-font-size="2xl" font-weight="700" mt="10" mb="4">Details should serve the user</h4>
+      <p mb="6" md-font-size="lg">There is a temptation to add details simply to show that you can.</p>
+      <p mb="6" md-font-size="lg">I try to ask a different question: does this detail make the experience clearer, faster, safer, or more enjoyable?</p>
+      <p mb="6" md-font-size="lg">If yes, it deserves consideration.</p>
+      <p mb="6" md-font-size="lg">If the answer is no, it might just be decoration.</p>
+      <p mb="6" md-font-size="lg">The details people don't notice are not valuable because they are hidden.</p>
+      <p mb="6" md-font-size="lg">They are valuable because they quietly remove friction.</p>
+      <p mb="6" md-font-size="lg">That is the kind of polish I want in the products I build.</p>
+      <p mb="6" md-font-size="lg">Not polish that screams for attention.</p>
+      <p mb="6" md-font-size="lg">Polish that makes the entire interface feel like someone cared.</p>
+    </div>
+  </div>
+
+  <!-- Prev / next -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div w="full" max-w="42rem" display="flex" justify="between" gap="4" pt="8" border-t="1px" border-color="grey-200" dark-border-color="grey-800">
+      <a href="building-before-i-felt-ready.html" display="flex" flex-col gap="1" max-w="45%">
+        <span text="grey-500" font-size="sm" display="flex" items="center" gap="1"><i class="ri-arrow-left-line"></i> Previous</span>
+        <span font-weight="600">What I Learned From Building Before I Felt Ready</span>
+      </a>
+      <a href="from-idea-to-interface.html" display="flex" flex-col gap="1" align="right" max-w="45%">
+        <span text="grey-500" font-size="sm" display="flex" items="center" justify="end" gap="1">Next <i class="ri-arrow-right-line"></i></span>
+        <span font-weight="600">From Idea to Interface: How I Start a New Project</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA / Contact -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div rounded="3xl" bg="blue-900" dark-bg="blue-950" w="full" p="10" md-p="16" display="flex" flex-col items="center" align="center" gap="4">
+      <h3 text="#fff" font-size="3xl" md-font-size="5xl" font-weight="700" leading="2.5rem" md-leading="3.5rem">Let's work together.</h3>
+      <p text="#fff/80" font-size="base" md-font-size="lg" max-w="36rem">
+        Have a project in mind, or just want to talk shop about design systems? I'm always open to a good conversation.
+      </p>
+
+      <div display="flex" gap="4" mt="6" wrap justify="center">
+        <a href="mailto:adetayoinfo2004@gmail.com" display="flex" items="center" gap="2" bg="#fff" text="blue-900" font-weight="600" px="6" py="3" rounded="full">
+          <i class="ri-mail-line" font-size="lg"></i> Email me
+        </a>
+        <a href="contact.html" display="flex" items="center" gap="2" border="1.5px" border-color="#fff/40" text="#fff" font-weight="600" px="6" py="3" rounded="full">
+          Contact<i class="ri-arrow-right-up-line" font-size="lg"></i>
+        </a>
+      </div>
+
+      <div display="flex" gap="6" mt="8">
+        <a href="https://github.com/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-github-fill" font-size="2xl"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-linkedin-box-fill" font-size="2xl"></i>
+        </a>
+        <a href="https://twitter.com/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-twitter-x-fill" font-size="2xl"></i>
+        </a>
+        <a href="https://dribbble.com/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-dribbble-fill" font-size="2xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col md-flex-row justify="between" items="center" gap="4" border-t="1px" border-color="grey-200" dark-border-color="grey-800" mt="8">
+    <div display="flex" items="center" gap="2">
+      <img src="assets/images/avatar.png" w="8" h="8" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+      <span text="text" font-size="md" font-weight="600">Cody</span>
+    </div>
+
+    <p text="grey-500" font-size="md">&copy; <span id="year"></span> Cody. All rights reserved.</p>
+
+    <div display="flex" gap="4">
+      <a href="https://github.com/yourhandle" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-github-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-linkedin-box-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://twitter.com/yourhandle" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-twitter-x-fill" font-size="2xl"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const iconLight = document.getElementById('theme-icon-light');
+    const iconDark = document.getElementById('theme-icon-dark');
+
+    function syncThemeIcon() {
+      const isDark = html.classList.contains('dark');
+      iconLight.setAttribute('display', isDark ? 'none' : 'flex');
+      iconDark.setAttribute('display', isDark ? 'flex' : 'none');
+    }
+    syncThemeIcon();
+
+    themeToggle.addEventListener('click', function () {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      syncThemeIcon();
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    let menuOpen = false;
+
+    function setMenu(open) {
+      menuOpen = open;
+      mobileMenu.setAttribute('display', open ? 'flex' : 'none');
+      menuIconOpen.setAttribute('display', open ? 'none' : 'flex');
+      menuIconClose.setAttribute('display', open ? 'flex' : 'none');
+    }
+
+    menuToggle.addEventListener('click', function () {
+      setMenu(!menuOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMenu(false);
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (menuOpen && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        setMenu(false);
+      }
+    });
+  </script>
+</body>
+</html>

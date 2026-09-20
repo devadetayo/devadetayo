@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const stored = localStorage.getItem('quanta-theme');
+  const stored = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initialTheme = stored || (prefersDark ? 'dark' : 'light');
   setTheme(initialTheme);

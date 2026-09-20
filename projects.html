@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <title>Projects — Cody</title>
+  <link href="assets/atomattr/dist/assets/index-DStjo_oU.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/remixicon/remixicon.css" />
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/atomattr/dist/assets/index-DqZ65fpu.js"></script>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body bg="grey-50" dark-bg="grey-950">
+  <header py="4" px="4" md-px="12" lg-px="16" w="full" display="flex" fixed top="0" left="0" z="50">
+    <nav p="2" md-p="3" bg="#fff/50" dark-bg="#000/50" backdrop-blur="4px" rounded="full" display="flex" justify="between" w="full" relative>
+      <a href="index.html" display="flex" items="center" gap="2">
+        <img src="assets/images/avatar.png" w="9" h="9" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+        <span display="none" md-display="flex" text="text" font-size="lg" font-weight="700">Cody</span>
+      </a>
+
+      <div gap="1" display="none" md-display="flex" items="center">
+        <a href="about.html" py="2" px="3" font-size="md" display="flex" items="center">About</a>
+        <a href="projects.html" py="2" px="3" font-size="md" display="flex" items="center" text="blue-900" dark-text="blue-500" font-weight="600">Projects</a>
+        <a href="blog.html" py="2" px="3" font-size="md" display="flex" items="center">Blog</a>
+        <a href="contact.html" py="2" px="3" font-size="md" display="flex" items="center">Contact</a>
+      </div>
+
+      <div display="flex" items="center" gap="2">
+        <button id="theme-toggle" type="button" display="flex" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="theme-icon-light" class="ri-sun-line" font-size="lg"></i>
+          <i id="theme-icon-dark" class="ri-moon-line" font-size="lg" display="none"></i>
+        </button>
+
+        <button id="menu-toggle" type="button" display="flex" md-display="none" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="menu-icon-open" class="ri-menu-3-line" font-size="lg"></i>
+          <i id="menu-icon-close" class="ri-close-line" font-size="lg" display="none"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" display="none" md-display="none" absolute top="100%" left="0" mt="2" w="full" bg="#fff" dark-bg="grey-950" rounded="2xl" p="2" flex-col gap="1" shadow="lg">
+        <a href="about.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">About</a>
+        <a href="projects.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Projects</a>
+        <a href="blog.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Blog</a>
+        <a href="contact.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="start" items="start" pt="24">
+    <div display="flex" flex-col gap="2" py="6" mb="6" border-b="1px" border-color="grey-200" dark-border-color="grey-800" w="full">
+      <h3 text="text" font-size="xl" md-font-size="2xl" font-weight="700" tracking="0.3">Featured Project</h3>
+    </div>
+    <div grid md-grid-cols="9" gap="8" md-gap="12" w="full">
+      <div md-col-span="5" rounded="3xl" bg="amber-400" h="18rem" md-h="24rem" overflow="hidden" display="flex" flex-col  pt="16" pl="16">
+        <img src="assets/images/atomattr.png" w="full" h="full" object="cover">
+      </div>
+
+      <div md-col-span="4" align="left" display="flex" flex-col justify="end">
+        <span text="blue-900" dark-text="blue-500" font-size="sm" font-weight="700" tracking="0.1">CSS FRAMEWORK</span>
+        <h3 font-size="2xl" md-font-size="3xl" font-weight="700" mb="4">Atomattr</h3>
+        <p mb="6" md-font-size="lg">
+          My own attribute-driven styling framework — write styles directly as HTML attributes instead of utility classes.
+        </p>
+        <div display="flex" gap="2" flex-wrap mb="6">
+          <span rounded="full" border="1px" border-color="grey-200" dark-border-color="grey-800" px="3" py="1" font-size="sm">JavaScript</span>
+          <span rounded="full" border="1px" border-color="grey-200" dark-border-color="grey-800" px="3" py="1" font-size="sm">CSS</span>
+          <span rounded="full" border="1px" border-color="grey-200" dark-border-color="grey-800" px="3" py="1" font-size="sm">Design Systems</span>
+        </div>
+        <a href="atomattr.html" display="flex" items="center" gap="2" font-weight="600" text="blue-900" dark-text="blue-500" w="fit-content">
+          Explore Atomattr <i class="ri-arrow-right-up-line" font-size="lg"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page intro -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col>
+
+    <div display="flex" flex-col gap="2" py="6" mb="6" border-b="1px" border-color="grey-200" dark-border-color="grey-800" w="full">
+      <h3 text="text" font-size="xl" md-font-size="2xl" font-weight="700" tracking="0.3">My Project</h3>
+    </div>
+
+    <div grid md-grid-cols="8" gap="8" md-gap="12" w="full">
+      <div md-col-span="3" rounded="3xl" bg="blue-400" h="18rem" md-h="30rem" overflow="hidden" display="flex" flex-col gap="2" group>
+        <div p="6" md-p="12" items="end" align="end">
+          <p>Brigmi Realestate</p>
+          <h3 font-size="xl" md-font-size="2xl" font-weight="700" text="text">Website & App</h3>
+        </div>
+        <div mt="auto" group-hover-transform="scale(1.08)" duration="300ms" ease>
+          <img src="assets/images/mock-2.png">
+        </div>
+      </div>
+
+      <div md-col-span="5" rounded="3xl" bg="teal-500" h="18rem" md-h="30rem" overflow="hidden" display="flex" flex-col gap="2" group>
+        <div p="6" md-p="12" items="end" align="end">
+          <p>Portfolio  V1</p>
+          <h3 font-size="xl" md-font-size="2xl" font-weight="700" text="text">My first Portfolio</h3>
+        </div>
+        <div mt="auto" min-h="32" w="full" flex="1" group-hover-transform="scale(1.08)" duration="300ms" ease>
+          <img src="assets/images/portfolio-v1.png" w="full" h="full" object="cover" object-position="right" ml="12" md-ml="20">
+        </div>
+      </div>
+
+      <div md-col-span="5" rounded="3xl" bg="amber-400" h="18rem" md-h="30rem" overflow="hidden" display="flex" flex-col gap="2" group>
+        <div p="6" md-p="12" items="end" align="end">
+          <p>Portfolio  V2</p>
+          <h3 font-size="xl" md-font-size="2xl" font-weight="700" text="text">My second Portfolio</h3>
+        </div>
+        <div mt="auto" min-h="32" w="full" flex="1" group-hover-transform="scale(1.08)" duration="300ms" ease>
+          <img src="assets/images/portfolio-v2.png" w="full" h="full" object="cover" object-position="right" ml="12" md-ml="20">
+        </div>
+      </div>
+
+      <div md-col-span="3" rounded="3xl" bg="purple-400" h="18rem" md-h="30rem" overflow="hidden" display="flex" flex-col gap="2" group>
+        <div p="6" md-p="12" items="end" align="end">
+          <p>Nexatar</p>
+          <h3 font-size="xl" md-font-size="2xl" font-weight="700" text="text">Website & App</h3>
+        </div>
+        <div mt="auto" w="full" group-hover-transform="scale(1.08)" duration="300ms" ease>
+          <img src="assets/images/mock-3.png">
+        </div>
+      </div>
+
+      <div md-col-span="4" rounded="3xl" bg="purple-400" h="18rem" md-h="30rem" overflow="hidden" display="flex" flex-col gap="2" group>
+        <div p="6" md-p="12" items="end" align="end">
+          <p>Zibra Planet Ltd.</p>
+          <h3 font-size="xl" md-font-size="2xl" font-weight="700" text="text">Website</h3>
+        </div>
+        <div mt="auto" min-h="32" w="full" flex="1" group-hover-transform="scale(1.08)" duration="300ms" ease>
+          <img src="assets/images/zibraplanet.png" w="full" h="full" object="cover" object-position="right" ml="12" md-ml="20">
+        </div>
+      </div>
+
+      <div md-col-span="4" rounded="3xl" bg="emerald-400" h="18rem" md-h="30rem" overflow="hidden" display="flex" flex-col gap="2" group>
+        <div p="6" md-p="12" items="end" align="end">
+          <p>Ayaahub</p>
+          <h3 font-size="xl" md-font-size="2xl" font-weight="700" text="text">Website</h3>
+        </div>
+        <div mt="auto" w="full" group-hover-transform="scale(1.08)" duration="300ms" ease>
+          <img src="assets/images/mock-4.png">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA / Contact -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div rounded="3xl" bg="blue-900" dark-bg="blue-950" w="full" p="10" md-p="16" display="flex" flex-col items="center" align="center" gap="4">
+      <h3 text="#fff" font-size="3xl" md-font-size="5xl" font-weight="700" leading="2.5rem" md-leading="3.5rem">Let's work together.</h3>
+      <p text="#fff/80" font-size="base" md-font-size="lg" max-w="36rem">
+        Have a project in mind, or just want to talk shop about design systems? I'm always open to a good conversation.
+      </p>
+
+      <div display="flex" gap="4" mt="6" wrap justify="center">
+        <a href="mailto:adetayoinfo2004@gmail.com" display="flex" items="center" gap="2" bg="#fff" text="blue-900" font-weight="600" px="6" py="3" rounded="full">
+          <i class="ri-mail-line" font-size="lg"></i> Email me
+        </a>
+        <a href="contact.html" display="flex" items="center" gap="2" border="1.5px" border-color="#fff/40" text="#fff" font-weight="600" px="6" py="3" rounded="full">
+          Contact<i class="ri-arrow-right-up-line" font-size="lg"></i>
+        </a>
+      </div>
+
+      <div display="flex" gap="6" mt="8">
+        <a href="https://github.com/devadetayo" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-github-fill" font-size="2xl"></i>
+        </a>
+        <a href="https://linkedin.com/in/devadetayo" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-linkedin-box-fill" font-size="2xl"></i>
+        </a>
+        <a href="https://x.com/devadetayo" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-twitter-x-fill" font-size="2xl"></i>
+        </a>
+        <a href="https://dribbble.com/devadetayo" target="_blank" text="#fff/70" hover-text="#fff">
+          <i class="ri-dribbble-fill" font-size="2xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col md-flex-row justify="between" items="center" gap="4" border-t="1px" border-color="grey-200" dark-border-color="grey-800" mt="8">
+    <div display="flex" items="center" gap="2">
+      <img src="assets/images/avatar.png" w="8" h="8" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+      <span text="text" font-size="md" font-weight="600">Cody</span>
+    </div>
+
+    <p text="grey-500" font-size="md">&copy; <span id="year"></span> Cody. All rights reserved.</p>
+
+    <div display="flex" gap="4">
+      <a href="https://github.com/devadetayo" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-github-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://linkedin.com/in/devadetayo" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-linkedin-box-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://x.com/devadetayo" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-twitter-x-fill" font-size="2xl"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const iconLight = document.getElementById('theme-icon-light');
+    const iconDark = document.getElementById('theme-icon-dark');
+
+    function syncThemeIcon() {
+      const isDark = html.classList.contains('dark');
+      iconLight.setAttribute('display', isDark ? 'none' : 'flex');
+      iconDark.setAttribute('display', isDark ? 'flex' : 'none');
+    }
+    syncThemeIcon();
+
+    themeToggle.addEventListener('click', function () {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      syncThemeIcon();
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    let menuOpen = false;
+
+    function setMenu(open) {
+      menuOpen = open;
+      mobileMenu.setAttribute('display', open ? 'flex' : 'none');
+      menuIconOpen.setAttribute('display', open ? 'none' : 'flex');
+      menuIconClose.setAttribute('display', open ? 'flex' : 'none');
+    }
+
+    menuToggle.addEventListener('click', function () {
+      setMenu(!menuOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMenu(false);
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (menuOpen && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        setMenu(false);
+      }
+    });
+  </script>
+</body>
+</html>

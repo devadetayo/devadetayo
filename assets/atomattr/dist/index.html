@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Atomattr — Build interfaces with attributes</title>
+
+  <meta
+    name="description"
+    content="Atomattr is an attribute-driven styling framework for building modern interfaces across HTML, React, and React Native."                                                   
+  />
+
+  <!-- Load Remix Icon separately in your project -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Syntax highlighting: use the same Foundation code theme in both
+       light and dark modes so the syntax colors stay consistent. -->
+  <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/foundation.min.css" media="(prefers-color-scheme: light)">
+  <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css" media="(prefers-color-scheme: dark)">
+
+    <style>
+    html {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Inter", sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.015em;
+    }
+
+    code, pre, pre code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Syntax highlighting sits on transparent code blocks so the
+       surrounding atomattr surface color still shows through */
+    pre code.hljs {
+      background: transparent !important;
+      padding: 0 !important;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-DqZ65fpu.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DStjo_oU.css">
+</head>
+
+<body
+  bg="#fff" dark-bg="grey-950"
+  text="text"
+  min-h="screen"
+>
+
+  <header data-site-nav position="sticky" top="0" z="100" bg="#fff" dark-bg="gray-950" border-b="1px" border-color="gray-100" dark-border-color="gray-900" backdrop-blur="md"></header>
+
+
+  <main>
+
+
+    <!-- ================================================= -->
+    <!-- HERO -->
+    <!-- ================================================= -->
+
+    <section
+      w="full"
+      mx="auto"
+      px="4"
+      lg-px="6"
+      xl-px="12"
+      py="8"
+      md-py="12"
+      lg-py="16"
+    >
+
+      <div md-max-w="60vw" mx="auto" text-align="center"
+      >
+        <a
+          href="docs.html"
+          display="inline-flex"
+          items="center"
+          gap="2"
+          bg="grey-100"
+          dark-bg="gray-900"
+          rounded="full"
+          px="3"
+          py="1.5"
+          text="muted"
+          text-decoration="none"
+          font-size="sm"
+          mb="6"
+        >
+
+          <span
+            w="2"
+            h="2"
+            rounded="full"
+            bg="success"
+          ></span>
+
+          Now building in public
+
+          <i class="ri-arrow-right-line"></i>
+
+        </a>
+
+
+        <h1
+          font-size="4xl"
+          sm-font-size="5xl"
+          md-font-size="6xl"
+          lg-font-size="7xl"
+          font-weight="extrabold"
+          line-height="tight"
+          tracking="tight"
+          mb="4"
+        >
+          Build interfaces
+
+          <br />
+
+          <span text="primary">
+            with attributes.
+          </span>
+        </h1>
+
+
+        <p
+          max-w="2xl"
+          mx="auto"
+          font-size="lg"
+          md-font-size="xl"
+          text="muted"
+          line-height="relaxed"
+          mb="8"
+        >
+          Every spacing, color, and layout decision lives as an
+          attribute on the element it styles — so a component still
+          reads like the thing it renders, not a class-name index.
+        </p>
+
+
+        <div
+          display="flex"
+          flex-col
+          sm-flex-row
+          items="center"
+          justify="center"
+          gap="3"
+        >
+
+          <a
+            href="docs.html"
+            display="flex"
+            items="center"
+            justify="center"
+            gap="2"
+            bg="primary"
+            text="white"
+            px="6"
+            py="3.5"
+            rounded="xl"
+            font-weight="600"
+            text-decoration="none"
+            w="full"
+            sm-w="auto"
+          >
+            Start building
+            <i class="ri-arrow-right-line"></i>
+          </a>
+
+
+          <a
+            href="#examples"
+            display="flex"
+            items="center"
+            justify="center"
+            gap="2"
+            bg="grey-100"
+            dark-bg="gray-900"
+            text="text"
+            border="border"
+            px="6"
+            py="3.5"
+            rounded="xl"
+            font-weight="600"
+            text-decoration="none"
+            w="full"
+            sm-w="auto"
+          >
+            Explore the API
+            <i class="ri-code-s-line"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Hero editor -->
+
+      <div
+        max-w="5xl"
+        mx="auto"
+        mt="16"
+        bg="grey-100"
+        dark-bg="gray-900"
+        text="gray-100"
+        rounded="2xl"
+        overflow="hidden"
+        border="1px" 
+        border-color="gray-200"
+        dark-border-color="gray-800"
+      >
+
+        <div
+          py="4"
+          px="4"
+          display="flex"
+          items="center"
+          border-b="1px" 
+          border-color="gray-200"
+          dark-border-color="gray-800"
+        >
+
+          <div
+            display="flex"
+            items="center"
+            gap="2"
+          >
+            <span
+              w="2.5"
+              h="2.5"
+              rounded="full"
+              bg="red-500"
+            ></span>
+
+            <span
+              w="2.5"
+              h="2.5"
+              rounded="full"
+              bg="amber-500"
+            ></span>
+
+            <span
+              w="2.5"
+              h="2.5"
+              rounded="full"
+              bg="emerald-500"
+            ></span>
+          </div>
+
+
+          <span
+            ml="4"
+            text="gray-400"
+            font-size="md"
+            color="text"
+          >
+            App.tsx
+          </span>
+
+        </div>
+
+
+        <pre
+          px="6"
+          md-px="8"
+          overflow="auto"
+          font-size="sm"
+          line-height="relaxed"
+        ><code class="language-html">&lt;section bg="surface" p="8" rounded="2xl" display="grid" grid-cols="1"  md-grid-cols="2"  gap="8"&gt;
+  &lt;div&gt;
+    &lt;h1 font-size="5xl"  font-weight="bold"&gt;
+      Build faster.
+    &lt;/h1&gt;
+    &lt;p text="muted"&gt;
+      Ship without the class soup.
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button bg="primary" text="white"  px="6" py="3" rounded="lg"&gt;
+    Get started
+  &lt;/button&gt;
+&lt;/section&gt;</code></pre>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- INTRO -->
+    <!-- ================================================= -->
+
+    <section
+      id="features"
+      mx="auto"
+      px="4"
+      lg-px="6"
+      xl-px="12"
+      py="8"
+      md-py="12"
+      lg-py="16"
+    >
+
+      <div w="full">
+
+        <div
+          max-w="3xl"
+          mb="12"
+        >
+
+          <p
+            text="primary"
+            font-size="sm"
+            font-weight="bold"
+            tracking="wide"
+            mb="3"
+          >
+            WHY ATOMATTR
+          </p>
+
+          <h2
+            font-size="3xl"
+            md-font-size="5xl"
+            font-weight="bold"
+            tracking="tight"
+            mb="4"
+          >
+            Your markup should make sense.
+          </h2>
+
+          <p
+            font-size="lg"
+            text="muted"
+            line-height="relaxed"
+          >
+            Every styling decision sits on the element it affects.
+            No fifteen-class utility strings, and no separate
+            stylesheet to cross-reference just to know what a
+            <code>&lt;div&gt;</code> looks like.
+          </p>
+
+        </div>
+
+
+        <div
+          display="grid"
+          grid-cols="1"
+          md-grid-cols="3"
+          gap="6"
+        >
+
+          <article
+            bg="#fff"
+            dark-bg="gray-900"
+            shadow="md"
+            border="1px solid gray-100"
+            dark-border-color="gray-800"
+            rounded="2xl"
+            p="6"
+          >
+
+            <span
+              w="10"
+              h="10"
+              rounded="lg"
+              bg="primary/10"
+              text="primary"
+              display="flex"
+              items="center"
+              justify="center"
+              mb="5"
+            >
+              <i class="ri-code-box-line"></i>
+            </span>
+
+            <h3
+              font-size="xl"
+              font-weight="bold"
+              mb="3"
+            >
+              Attribute-first
+            </h3>
+
+            <p
+              text="muted"
+              line-height="relaxed"
+            >
+              Describe your interface directly in markup. Spacing,
+              colors, layout and typography stay close to the element.
+            </p>
+
+          </article>
+
+
+          <article
+            bg="#fff"
+            dark-bg="gray-900"
+            shadow="md"
+            border="1px solid gray-100"
+            dark-border-color="gray-800"
+            rounded="2xl"
+            p="6"
+          >
+
+            <span
+              w="10"
+              h="10"
+              rounded="lg"
+              bg="success/10"
+              text="success"
+              display="flex"
+              items="center"
+              justify="center"
+              mb="5"
+            >
+              <i class="ri-layout-grid-line"></i>
+            </span>
+
+            <h3
+              font-size="xl"
+              font-weight="bold"
+              mb="3"
+            >
+              Responsive by default
+            </h3>
+
+            <p
+              text="muted"
+              line-height="relaxed"
+            >
+              Keep responsive behavior readable with attributes like
+              <code>md-grid-cols="2"</code> and
+              <code>lg-grid-cols="4"</code>.
+            </p>
+
+          </article>
+
+
+          <article
+            bg="#fff"
+            dark-bg="gray-900"
+            shadow="md"
+            border="1px solid gray-100"
+            dark-border-color="gray-800"
+            rounded="2xl"
+            p="6"
+          >
+
+            <span
+              w="10"
+              h="10"
+              rounded="lg"
+              bg="warning/10"
+              text="warning"
+              display="flex"
+              items="center"
+              justify="center"
+              mb="5"
+            >
+              <i class="ri-smartphone-line"></i>
+            </span>
+
+            <h3
+              font-size="xl"
+              font-weight="bold"
+              mb="3"
+            >
+              Built beyond the browser
+            </h3>
+
+            <p
+              text="muted"
+              line-height="relaxed"
+            >
+              Bring the same styling concepts into React Native while
+              respecting what each platform can actually do.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- API -->
+    <!-- ================================================= -->
+
+    <section
+      id="examples"
+      mx="auto"
+      px="4"
+      lg-px="6"
+      xl-px="12"
+      py="8"
+      md-py="12"
+      lg-py="16"
+    >
+
+      <div
+        display="grid"
+        grid-cols="1"
+        lg-grid-cols="2"
+        gap="12"
+        items="center"
+      >
+
+        <div>
+
+          <p
+            text="primary"
+            font-size="sm"
+            font-weight="bold"
+            tracking="wide"
+            mb="3"
+          >
+            THE API
+          </p>
+
+          <h2
+            font-size="3xl"
+            md-font-size="5xl"
+            font-weight="bold"
+            tracking="tight"
+            mb="5"
+          >
+            Less syntax.
+            More signal.
+          </h2>
+
+          <p
+            font-size="lg"
+            text="muted"
+            line-height="relaxed"
+            mb="6"
+          >
+            There's one place a style decision lives: the attribute
+            itself. Not a class, not a modifier, not a wrapper
+            component — just <code>bg=</code>, <code>p=</code>,
+            <code>rounded=</code>, spelled the way you'd say them.
+          </p>
+
+
+          <div
+            display="flex"
+            flex-col
+            gap="4"
+          >
+
+            <div
+              display="flex"
+              gap="3"
+              items="start"
+            >
+              <span
+                w="8"
+                h="8"
+                rounded="full"
+                bg="primary/10"
+                text="primary"
+                display="flex"
+                items="center"
+                justify="center"
+                shrink="0"
+              >
+                <i class="ri-check-line"></i>
+              </span>
+
+              <div>
+                <h3 font-weight="bold">
+                  Familiar primitives
+                </h3>
+
+                <p text="muted" mt="1">
+                  Use simple attributes for spacing, layout,
+                  typography, borders and color.
+                </p>
+              </div>
+            </div>
+
+
+            <div
+              display="flex"
+              gap="3"
+              items="start"
+            >
+              <span
+                w="8"
+                h="8"
+                rounded="full"
+                bg="primary/10"
+                text="primary"
+                display="flex"
+                items="center"
+                justify="center"
+                shrink="0"
+              >
+                <i class="ri-check-line"></i>
+              </span>
+
+              <div>
+                <h3 font-weight="bold">
+                  Responsive attributes
+                </h3>
+
+                <p text="muted" mt="1">
+                  Put breakpoint behavior exactly where it belongs.
+                </p>
+              </div>
+            </div>
+
+
+            <div
+              display="flex"
+              gap="3"
+              items="start"
+            >
+              <span
+                w="8"
+                h="8"
+                rounded="full"
+                bg="primary/10"
+                text="primary"
+                display="flex"
+                items="center"
+                justify="center"
+                shrink="0"
+              >
+                <i class="ri-check-line"></i>
+              </span>
+
+              <div>
+                <h3 font-weight="bold">
+                  Semantic tokens
+                </h3>
+
+                <p text="muted" mt="1">
+                  Build interfaces around meaning instead of raw values.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div w="full"
+          bg="grey-100"
+          dark-bg="gray-900"
+          text="gray-100"
+          rounded="2xl"
+          overflow="hidden"
+          border="1px" 
+          border-color="gray-200"
+          dark-border-color="gray-800"
+        >
+
+          <div
+            py="4"
+            px="4"
+            display="flex"
+            justify="between"
+            items="center"
+            border-b="1px" 
+            border-color="gray-200"
+            dark-border-color="gray-800"
+          >
+
+            <span
+              text="gray-400"
+              font-size="sm"
+            >
+              component.html
+            </span>
+
+            <i
+              class="ri-file-code-line"
+              text="gray-500"
+            ></i>
+
+          </div>
+
+
+          <pre
+            px="6"
+            overflow="auto"
+            font-size="sm"
+            line-height="relaxed"
+          ><code class="language-html">&lt;div 
+  display="grid"
+  grid-cols="1"
+  md-grid-cols="2"
+  lg-grid-cols="4"
+  gap="4"
+  row-gap="2"
+  col-gap="3"&gt;
+  &lt;article 
+  bg="surface"
+  p="6"
+  rounded="xl"
+  border="border"&gt;
+    ...
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- PLATFORM -->
+    <!-- ================================================= -->
+
+    <section
+      id="platforms"
+      mx="auto"
+      px="4"
+      lg-px="6"
+      xl-px="12"
+      py="8"
+      md-py="12"
+      lg-py="16"
+    >
+
+      <div
+        w="full"
+      >
+        <div
+          md-max-w="70vw"
+          mb="12"
+        >
+
+          <p
+            text="primary/300"
+            font-size="sm"
+            font-weight="bold"
+            tracking="wide"
+            mb="3"
+          >
+            CROSS-PLATFORM
+          </p>
+
+          <h2
+            font-size="3xl"
+            md-font-size="5xl"
+            font-weight="bold"
+            tracking="tight"
+            mb="5" text="text"
+          >
+            One language.
+            Platform-aware output.
+          </h2>
+
+          <p
+            font-size="lg"
+            text="gray-400"
+            line-height="relaxed"
+          >
+            HTML and React Native have different rendering models.
+            Atomattr gives you a consistent styling API without
+            pretending those platforms are identical.
+          </p>
+
+        </div>
+
+
+        <div
+          display="grid"
+          grid-cols="1"
+          lg-grid-cols="2"
+          gap="6"
+        >
+
+          <article
+            mx="auto"
+            bg="grey-100"
+            dark-bg="gray-900"
+            rounded="2xl"
+            overflow="hidden"
+            border="1px" 
+            border-color="gray-200"
+            dark-border-color="gray-800" w="full"
+          >
+
+            <div
+              py="4"
+              px="4"
+              display="flex"
+              items="center"
+              border-b="1px" 
+              border-color="gray-200"
+              dark-border-color="gray-800"
+            >
+
+              <span
+                display="flex"
+                items="center"
+                justify="center"
+              >
+                <i class="ri-html5-line" font-size="28" color="danger"></i>
+              </span>
+
+              <div ml="3">
+                <h3 font-weight="bold" text="text">
+                  HTML
+                </h3>
+              </div>
+
+            </div>
+
+
+            <pre px="6"
+              overflow="auto"
+              font-size="sm"
+              line-height="relaxed"
+            ><code class="language-html">&lt;div
+  display="grid"
+  grid-cols="3"
+  gap="4"
+&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+          </article>
+
+
+          <article
+            mx="auto"
+            bg="grey-100"
+            dark-bg="gray-900"
+            rounded="2xl"
+            overflow="hidden"
+            border="1px" 
+            border-color="gray-200"
+            dark-border-color="gray-800"  w="full"
+          >
+
+            <div
+              py="4"
+              px="4"
+              display="flex"
+              items="center"
+              border-b="1px" 
+              border-color="gray-200"
+              dark-border-color="gray-800"
+            >
+
+              <span
+                display="flex"
+                items="center"
+                justify="center"
+              >
+                <i class="ri-reactjs-line" font-size="28" color="blue-500"></i>
+              </span>
+
+              <div ml="3">
+                <h3 font-weight="bold" text="text">
+                  React Native
+                </h3>
+              </div>
+
+            </div>
+
+
+            <pre px="6"
+              overflow="auto"
+              font-size="sm"
+              line-height="relaxed"
+            ><code class="language-html">&lt;View
+  display="grid"
+  grid-cols="3"
+  gap="4"
+/&gt;</code></pre>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- COLORS -->
+    <!-- ================================================= -->
+
+    <section
+      id="colors"
+      mx="auto"
+      px="4"
+      lg-px="6"
+      xl-px="12"
+      py="8"
+      md-py="12"
+      lg-py="16"
+    >
+
+      <div
+        display="grid"
+        grid-cols="1"
+        lg-grid-cols="2"
+        gap="12"
+        items="center"
+      >
+
+        <div>
+
+          <p
+            text="primary"
+            font-size="sm"
+            font-weight="bold"
+            tracking="wide"
+            mb="3"
+          >
+            COLOR SYSTEM
+          </p>
+
+          <h2
+            font-size="3xl"
+            md-font-size="5xl"
+            font-weight="bold"
+            tracking="tight"
+            mb="5"
+          >
+            Design systems that feel customizable.
+          </h2>
+
+          <p
+            font-size="lg"
+            text="muted"
+            line-height="relaxed"
+            mb="6"
+          >
+            The primary color below isn't a screenshot — it's read
+            straight out of <code>--aa-color-primary</code> at render
+            time, in whichever mode your system is currently in.
+          </p>
+
+          <div
+            display="grid"
+            grid-cols="2"
+            gap="3"
+          >
+            <div
+              bg="primary/90"
+              text="white"
+              rounded="xl"
+              p="5"
+            >
+              <p text="white/80" font-size="md"  font-weight="700">Primary</p>
+            </div>
+
+            <div
+              bg="success/90"
+              text="white"
+              rounded="xl"
+              p="5"
+            >
+              <p text="white/80" font-size="md"  font-weight="700">Success</p>
+            </div>
+
+            <div
+              bg="warning/90"
+              text="gray-950"
+              rounded="xl"
+              p="5"
+            >
+              <p text="gray-950/80" font-size="md"  font-weight="700">Warning</p>
+            </div>
+
+            <div
+              bg="danger/90"
+              text="white"
+              rounded="xl"
+              p="5"
+            >
+              <p text="white/80" font-size="md"  font-weight="700">Danger</p>
+            </div>
+          </div>
+
+          <div
+            display="grid"
+            grid-cols="1"
+            sm-grid-cols="2"
+            gap="3"
+            mt="6"
+          >
+            <div
+              bg="gray-100"
+              dark-bg="gray-900"
+              border="border"
+              rounded="2xl"
+              p="5"
+            >
+              <p font-weight="bold" mb="1">Palette shades</p>
+              <div display="grid" grid-cols="5" gap="2" mt="3">
+                <span bg="primary/10" text="primary" rounded="lg" p="3" font-size="xs">10</span>
+                <span bg="primary/30" text="primary" rounded="lg" p="3" font-size="xs">30</span>
+                <span bg="primary/50" text="white" rounded="lg" p="3" font-size="xs">50</span>
+                <span bg="primary/70" text="white" rounded="lg" p="3" font-size="xs">70</span>
+                <span bg="primary/90" text="white" rounded="lg" p="3" font-size="xs">90</span>
+              </div>
+            </div>
+
+            <div
+              bg="gray-100"
+              dark-bg="gray-900"
+              border="border"
+              rounded="2xl"
+              p="5"
+            >
+              <p font-weight="bold" mb="1">Live gradient</p>
+              <div
+                bg-gradient="linear-gradient(135deg, var(--purple-500), color-mix(in oklch, var(--indigo-800), white 35%))"
+                rounded="lg"
+                p="3"
+                text="white"
+                font-weight="600"
+              >
+                Gradient
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div
+          bg="gray-100"
+          dark-bg="gray-900"
+          border="border"
+          rounded="2xl"
+          p="6"
+        >
+
+          <div
+            display="flex"
+            items="center"
+            justify="between"
+            mb="5"
+          >
+
+            <div>
+              <h3 font-weight="bold">
+                Semantic tokens
+              </h3>
+
+              <p
+                text="muted"
+                mt="1"
+              >
+                Tokens stay stable, palettes can change.
+              </p>
+            </div>
+
+            <i
+              class="ri-palette-line"
+              text="primary"
+              font-size="xl"
+            ></i>
+
+          </div>
+
+          <div
+            display="grid"
+            grid-cols="2"
+            gap="3"
+          >
+
+            <div
+              bg="primary"
+              text="white"
+              p="5"
+              rounded="lg"
+              display="flex"
+              flex-col
+              gap="2"
+            >
+              <span>Primary</span>
+            </div>
+
+            <div
+              bg="background"
+              dark-bg="gray-900"
+              text="text"
+              dark-text="white"
+              p="5"
+              rounded="lg"
+            >
+              Surface
+            </div>
+
+            <div
+              bg="success"
+              text="white"
+              p="5"
+              rounded="lg"
+            >
+              Success
+            </div>
+
+            <div
+              bg="border"
+              dark-bg="gray-700"
+              text="text"
+              dark-text="white"
+              p="5"
+              rounded="lg"
+            >
+              Border
+            </div>
+
+          </div>
+
+          <div
+            display="flex"
+            flex-col
+            gap="3"
+            mt="6"
+          >
+            <div
+              bg="gray-200"
+              dark-bg="gray-800"
+              border="border"
+              dark-border-color="gray-700"
+              rounded="2xl"
+              p="5"
+            >
+              <p font-weight="bold" mb="2">Text variation example</p>
+              <p text="muted" dark-text="gray-400" font-size="sm" line-height="relaxed">
+                This preview demonstrates how text can adapt between light and dark modes using semantic color tokens.
+              </p>
+            </div>
+
+            <div
+              bg="gray-200"
+              dark-bg="gray-800"
+              rounded="2xl"
+              p="5"
+            >
+              <p font-weight="bold" mb="2">Custom theme</p>
+              <p text="muted" font-size="sm" line-height="relaxed">
+                A user can change these values in their theme configuration without changing the underlying semantic token names.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- COMMUNITY -->
+    <!-- ================================================= -->
+
+    <section
+      id="community"
+      mx="auto"
+      px="4"
+      lg-px="6"
+      xl-px="12"
+      py="8"
+      md-py="12"
+      lg-py="16"
+    >
+
+      <div
+        display="grid"
+        grid-cols="1"
+        lg-grid-cols="2"
+        gap="6"
+        items="stretch"
+      >
+
+        <div
+          lg-col-span="1"
+          display="flex"
+          flex-col
+          justify="center"
+        >
+
+          <p
+            text="primary"
+            font-size="sm"
+            font-weight="bold"
+            tracking="wide"
+            mb="3"
+          >
+            SOCIAL
+          </p>
+
+
+          <h2
+            font-size="3xl"
+            md-font-size="5xl"
+            font-weight="bold"
+            tracking="tight"
+            mb="5"
+          >
+            Build with people nearby.
+          </h2>
+
+
+          <p
+            font-size="lg"
+            text="muted"
+            line-height="relaxed"
+          >
+            Follow progress, ask questions, share experiments, and
+            help shape the attribute API as it grows.
+          </p>
+
+        </div>
+
+
+        <div
+          lg-col-span="2"
+          display="grid"
+          grid-cols="1"
+          md-grid-cols="3"
+          gap="3"
+        >
+
+          <a
+            href="#community"
+            bg="gray-100"
+            dark-bg="gray-900"
+            border="border"
+            rounded="2xl"
+            p="6"
+            text="text"
+            text-decoration="none"
+            display="flex"
+            flex-col
+            justify="between"
+            gap="4"
+          >
+            <span
+              w="11"
+              h="11"
+              rounded="xl"
+              bg="indigo-600"
+              text="#fff"
+              display="flex"
+              items="center"
+              justify="center"
+              font-size="xl"
+            >
+              <i class="ri-discord-fill"></i>
+            </span>
+
+            <span>
+              <strong display="block" mb="2">Community chat</strong>
+              <span text="muted" line-height="relaxed">
+                Get help, trade ideas, and talk through real interface patterns.
+              </span>
+            </span>
+          </a>
+
+
+          <a
+            href="https://github.com/"
+            bg="gray-100"
+            dark-bg="gray-900"
+            border="border"
+            rounded="2xl"
+            p="6"
+            text="text"
+            text-decoration="none"
+            display="flex"
+            flex-col
+            justify="between"
+            gap="4"
+          >
+            <span
+              w="11"
+              h="11"
+              rounded="xl"
+              bg="gray-950"
+              dark-bg="white"
+              text="white"
+              dark-text="gray-950"
+              display="flex"
+              items="center"
+              justify="center"
+              font-size="xl"
+            >
+              <i class="ri-github-fill"></i>
+            </span>
+
+            <span>
+              <strong display="block" mb="2">Source and issues</strong>
+              <span text="muted" line-height="relaxed">
+                Read the code, open issues, and propose changes in public.
+              </span>
+            </span>
+          </a>
+
+
+          <a
+            href="support.html"
+            bg="gray-100"
+            dark-bg="gray-900"
+            border="border"
+            rounded="2xl"
+            p="6"
+            text="text"
+            text-decoration="none"
+            display="flex"
+            flex-col
+            justify="between"
+            gap="4"
+          >
+            <span
+              w="11"
+              h="11"
+              rounded="xl"
+              bg="black"
+              text="#fff"
+              display="flex"
+              items="center"
+              justify="center"
+              font-size="xl"
+            >
+              <i class="ri-twitter-x-fill"></i>
+            </span>
+
+            <span>
+              <strong display="block" mb="2">Follow on X</strong>
+              <span text="muted" line-height="relaxed">
+                Send focused questions when a thread needs more detail.
+              </span>
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- CTA -->
+    <!-- ================================================= -->
+
+    <section
+      mx="auto"
+      px="4"
+      lg-px="6"
+      xl-px="12"
+      py="14"
+      md-py="20"
+    >
+
+      <div
+        display="grid"
+        grid-cols="1"
+        lg-grid-cols="12"
+        gap="6"
+        items="stretch"
+      >
+
+        <div
+          lg-col-span="8"
+          bg="indigo-600"
+          rounded="2xl"
+          p="8"
+          md-p="10"
+          display="flex"
+          flex-col
+          justify="between"
+          gap="12"
+        >
+
+          <div>
+            <p
+              font-size="sm"
+              font-weight="bold"
+              tracking="wide"
+              text="#fff"
+              mb="4"
+            >
+              START SMALL
+            </p>
+
+            <h2
+              font-size="3xl"
+              md-font-size="5xl"
+              font-weight="800"
+              tracking="tight"
+              mb="5"
+              text="white"
+            >
+              Try one component, then decide.
+            </h2>
+
+            <p
+              max-w="2xl"
+              font-size="lg"
+              text="#fff/75"
+              line-height="relaxed"
+            >
+              Open the docs, copy a pattern, and see how the markup
+              feels before changing anything big in your project.
+            </p>
+          </div>
+
+          <a
+            href="docs.html"
+            bg="#fff"
+            text="muted"
+            hover-text="primary"
+            px="6"
+            py="3.5"
+            rounded="xl"
+            font-weight="bold"
+            text-decoration="none"
+            display="inline-flex"
+            items="center"
+            gap="2"
+            w="fit"
+          >
+            Read the docs
+            <i class="ri-arrow-right-line"></i>
+          </a>
+
+        </div>
+
+        <div
+          lg-col-span="4"
+          display="grid"
+          grid-cols="1"
+          gap="4"
+        >
+
+          <a
+            href="#examples"
+            bg="gray-100"
+            dark-bg="gray-900"
+            border="border"
+            rounded="2xl"
+            p="6"
+            text="text"
+            text-decoration="none"
+          >
+            <i class="ri-code-s-slash-line" text="primary" font-size="2xl"></i>
+            <h3 font-size="xl" font-weight="bold" mt="5" mb="2">Browse examples</h3>
+            <p text="muted" line-height="relaxed">Compare common layouts as readable attributes.</p>
+          </a>
+
+          <a
+            href="#colors"
+            bg="gray-100"
+            dark-bg="gray-900"
+            border="border"
+            rounded="2xl"
+            p="6"
+            text="text"
+            text-decoration="none"
+          >
+            <i class="ri-palette-line" text="warning" font-size="2xl"></i>
+            <h3 font-size="xl" font-weight="bold" mt="5" mb="2">Tune tokens</h3>
+            <p text="muted" line-height="relaxed">Use semantic colors without chasing class names.</p>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================================================= -->
+  <!-- FOOTER -->
+  <!-- ================================================= -->
+
+  <footer
+    bg="gray-100"
+    dark-bg="gray-950"
+  >
+
+    <div
+      max-w="7xl"
+      mx="auto"
+      px="4"
+      md-px="6"
+      lg-px="8"
+      py="12"
+      md-py="24"
+    >
+
+      <div display="grid" grid-cols="1" lg-grid-cols="6" gap="8">
+
+        <div lg-col-span="2">
+
+          <a href="${root}index.html" display="flex" items="center" gap="2.5" text="text" text-decoration="none" font-weight="bold" font-size="lg">
+            <img src="../assets/images/logo.png" h="6" dark-display="none" display="flex">
+            <img src="../assets/images/logo.dark.png" h="6" dark-display="flex" display="none">
+          </a>
+
+
+          <p
+            max-w="sm"
+            mt="4"
+            text="muted"
+            line-height="relaxed"
+          >
+            Attribute-driven styling for modern interfaces,
+            from the web to React Native.
+          </p>
+
+          <div display="flex" gap="2" mt="6">
+            <a
+              href="#community"
+              aria-label="Open community chat"
+              w="10"
+              h="10"
+              rounded="lg"
+              border="border"
+              display="flex"
+              items="center"
+              justify="center"
+              text="text"
+              text-decoration="none"
+            >
+              <i class="ri-discord-fill" font-size="24"></i>
+            </a>
+
+            <a
+              href="https://github.com/"
+              aria-label="Open GitHub"
+              w="10"
+              h="10"
+              rounded="lg"
+              border="border"
+              display="flex"
+              items="center"
+              justify="center"
+              text="text"
+              text-decoration="none"
+            >
+              <i class="ri-github-fill" font-size="24"></i>
+            </a>
+
+            <a
+              href="#community"
+              aria-label="Open community chat"
+              w="10"
+              h="10"
+              rounded="lg"
+              border="border"
+              display="flex"
+              items="center"
+              justify="center"
+              text="text"
+              text-decoration="none"
+            >
+              <i class="ri-twitter-x-fill" font-size="24"></i>
+            </a>
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h3
+            font-weight="bold"
+            mb="2"
+          >
+            Product
+          </h3>
+
+          <div
+            display="flex"
+            flex-col
+            gap="2"
+          >
+            <a href="docs.html" text="muted" text-decoration="none" hover-text="text">Documentation</a>
+            <a href="#examples" text="muted" text-decoration="none" hover-text="text">Examples</a>
+            <a href="#platforms" text="muted" text-decoration="none" hover-text="text">Platforms</a>
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h3
+            font-weight="bold"
+            mb="2"
+          >
+            Community
+          </h3>
+
+          <div
+            display="flex"
+            flex-col
+            gap="2"
+          >
+            <a href="#community" text="muted" text-decoration="none" hover-text="text">Discord</a>
+            <a href="https://github.com/" text="muted" text-decoration="none" hover-text="text">GitHub</a>
+            <a href="support.html" text="muted" text-decoration="none"  hover-text="text">Follow on X </a>
+          </div>
+
+        </div>
+
+        <div>
+
+          <h3 font-weight="bold" mb="2">
+            Sponsors
+          </h3>
+
+          <div
+            display="flex"
+            flex-col
+            gap="2"
+          >
+            <a href="sponsors.html" text="muted" text-decoration="none" hover-text="text">Sponsors</a>
+            <a href="#features" text="muted" text-decoration="none" hover-text="text">Open Collective</a>
+            <a href="#colors" text="muted" text-decoration="none" hover-text="text">Buy me a coffee</a>
+            <a href="#examples" text="muted" text-decoration="none" hover-text="text">Github Sponsor</a>
+          </div>
+        </div>
+
+
+        <div>
+
+          <h3 font-weight="bold" mb="2">
+            Quick Jump
+          </h3>
+
+          <div
+            display="flex"
+            flex-col
+            gap="2"
+          >
+            <a href="#features" text="muted" text-decoration="none" hover-text="text">Features</a>
+            <a href="#colors" text="muted" text-decoration="none" hover-text="text">Colors</a>
+            <a href="#examples" text="muted" text-decoration="none" hover-text="text">API</a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div
+        mt="10"
+        pt="6"
+        border-t="1px"
+        border-color="gray-200"
+        dark-border-color="gray-800"
+        display="flex"
+        flex-col
+        sm-flex-row
+        justify="between"
+        gap="3"
+        text="muted"
+      >
+
+        <span>
+          © 2026 Atomattr.
+        </span>
+
+        <span
+          display="flex"
+          items="center"
+          gap="2"
+        >
+          Built with Atomattr
+          <i class="ri-heart-3-line"></i>
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+  
+
+  <!-- Reads real computed values for anything marked data-token-value,
+       so the Colors section shows what's actually loaded, not a copy -->
+  <script>
+    (function () {
+      function paintTokens() {
+        const styles = getComputedStyle(document.documentElement);
+        document.querySelectorAll('[data-token-value]').forEach(function (el) {
+          const name = el.getAttribute('data-token-value');
+          const value = styles.getPropertyValue(name).trim();
+          el.textContent = value || '—';
+        });
+      }
+      paintTokens();
+      const mq = window.matchMedia('(prefers-color-scheme: dark)');
+      if (mq.addEventListener) mq.addEventListener('change', paintTokens);
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('button[aria-label="Toggle color theme"]')) {
+          setTimeout(paintTokens, 0);
+        }
+      });
+    })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

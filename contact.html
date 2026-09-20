@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <title>Contact — Cody</title>
+  <link href="assets/atomattr/dist/assets/index-DStjo_oU.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/remixicon/remixicon.css" />
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/atomattr/dist/assets/index-DqZ65fpu.js"></script>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body bg="grey-50" dark-bg="grey-950">
+  <header py="4" px="4" md-px="12" lg-px="16" w="full" display="flex" fixed top="0" left="0" z="50">
+    <nav p="2" md-p="3" bg="#fff/50" dark-bg="#000/50" backdrop-blur="4px" rounded="full" display="flex" justify="between" w="full" relative>
+      <div display="flex" items="center" gap="2">
+        <img src="assets/images/avatar.png" w="9" h="9" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+        <span display="none" md-display="flex" text="text" font-size="lg" font-weight="700">Cody</span>
+      </div>
+
+      <div gap="1" display="none" md-display="flex" items="center">
+        <a href="about.html" py="2" px="3" font-size="md" display="flex" items="center">About</a>
+        <a href="projects.html" py="2" px="3" font-size="md" display="flex" items="center">Projects</a>
+        <a href="blog.html" py="2" px="3" font-size="md" display="flex" items="center">Blog</a>
+        <a href="contact.html" py="2" px="3" font-size="md" display="flex" items="center" text="blue-900" dark-text="blue-500" font-weight="600">Contact</a>
+      </div>
+
+      <div display="flex" items="center" gap="2">
+        <button id="theme-toggle" type="button" display="flex" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="theme-icon-light" class="ri-sun-line" font-size="lg"></i>
+          <i id="theme-icon-dark" class="ri-moon-line" font-size="lg" display="none"></i>
+        </button>
+
+        <button id="menu-toggle" type="button" display="flex" md-display="none" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+          <i id="menu-icon-open" class="ri-menu-3-line" font-size="lg"></i>
+          <i id="menu-icon-close" class="ri-close-line" font-size="lg" display="none"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" display="none" md-display="none" absolute top="100%" left="0" mt="2" w="full" bg="#fff" dark-bg="grey-950" rounded="2xl" p="2" flex-col gap="1" shadow="lg">
+        <a href="about.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">About</a>
+        <a href="projects.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Projects</a>
+        <a href="blog.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Blog</a>
+        <a href="contact.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page intro -->
+  <div py="8" px="4" md-px="12" lg-px="16" align="center" display="flex" flex-col justify="center" items="center">
+    <div pt="24" md-max-w="74vw">
+      <span text="blue-900" dark-text="blue-500" font-size="sm" font-weight="700" tracking="0.1">CONTACT</span>
+      <h3 text="blue-900" dark-text="blue-500" font-size="4xl" md-font-size="6xl" font-weight="700" mt="2" mb="4" tracking="0.3" leading="2.5rem" md-leading="4rem">Let's talk.</h3>
+      <p font-size="base" md-font-size="lg" max-w="36rem">
+        Got a project, a question, or just want to say hi? Fill out the form or reach me directly — I usually reply within a day or two.
+      </p>
+    </div>
+  </div>
+
+  <!-- Form + direct details -->
+  <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col justify="center" items="center">
+    <div grid md-grid-cols="8" gap="8" md-gap="12" md-max-w="74vw" w="full">
+
+      <!-- Form -->
+      <div md-col-span="5">
+        <form id="contact-form" display="flex" flex-col gap="5">
+          <div display="flex" flex-col gap="2">
+            <label font-size="sm" font-weight="600" text="grey-700" dark-text="grey-300">Name</label>
+            <input type="text" name="name" required placeholder="Your name" bg="#fff" dark-bg="grey-900" border="1px" border-color="grey-200" dark-border-color="grey-800" rounded="xl" px="4" py="3" font-size="base">
+          </div>
+
+          <div display="flex" flex-col gap="2">
+            <label font-size="sm" font-weight="600" text="grey-700" dark-text="grey-300">Email</label>
+            <input type="email" name="email" required placeholder="you@example.com" bg="#fff" dark-bg="grey-900" border="1px" border-color="grey-200" dark-border-color="grey-800" rounded="xl" px="4" py="3" font-size="base">
+          </div>
+
+          <div display="flex" flex-col gap="2">
+            <label font-size="sm" font-weight="600" text="grey-700" dark-text="grey-300">Subject</label>
+            <input type="text" name="subject" placeholder="What's this about?" bg="#fff" dark-bg="grey-900" border="1px" border-color="grey-200" dark-border-color="grey-800" rounded="xl" px="4" py="3" font-size="base">
+          </div>
+
+          <div display="flex" flex-col gap="2">
+            <label font-size="sm" font-weight="600" text="grey-700" dark-text="grey-300">Message</label>
+            <textarea name="message" required rows="5" placeholder="Tell me a bit about it..." bg="#fff" dark-bg="grey-900" border="1px" border-color="grey-200" dark-border-color="grey-800" rounded="xl" px="4" py="3" font-size="base"></textarea>
+          </div>
+
+          <button type="submit" display="flex" items="center" justify="center" gap="2" bg="blue-900" dark-bg="blue-500" text="#fff" font-weight="600" px="6" py="3" rounded="full" border="none" cursor="pointer" w="fit-content">
+            Send message <i class="ri-send-plane-fill" font-size="lg"></i>
+          </button>
+
+          <p id="form-status" font-size="sm" text="grey-500" display="none"></p>
+        </form>
+      </div>
+
+      <!-- Direct contact -->
+      <div md-col-span="3" display="flex" flex-col gap="6">
+        <div rounded="3xl" border="1px" border-color="grey-200" dark-border-color="grey-800" p="6" display="flex" flex-col gap="4">
+          <a href="mailto:adetayoinfo2004@gmail.com" display="flex" items="center" gap="3">
+            <span display="flex" items="center" justify="center" w="10" h="10" rounded="full" bg="grey-100" dark-bg="grey-900">
+              <i class="ri-mail-line" font-size="lg" text="blue-900" dark-text="blue-500"></i>
+            </span>
+            <span>
+              <span display="block" font-size="sm" text="grey-500">Email</span>
+              <span display="block" font-weight="600">adetayoinfo2004@gmail.com</span>
+            </span>
+          </a>
+
+          <a href="https://wa.me/yourwhatsappnumber" target="_blank" display="flex" items="center" gap="3">
+            <span display="flex" items="center" justify="center" w="10" h="10" rounded="full" bg="grey-100" dark-bg="grey-900">
+              <i class="ri-whatsapp-line" font-size="lg" text="blue-900" dark-text="blue-500"></i>
+            </span>
+            <span>
+              <span display="block" font-size="sm" text="grey-500">WhatsApp</span>
+              <span display="block" font-weight="600">Message me</span>
+            </span>
+          </a>
+
+          <div display="flex" items="center" gap="3">
+            <span display="flex" items="center" justify="center" w="10" h="10" rounded="full" bg="grey-100" dark-bg="grey-900">
+              <i class="ri-map-pin-line" font-size="lg" text="blue-900" dark-text="blue-500"></i>
+            </span>
+            <span>
+              <span display="block" font-size="sm" text="grey-500">Location</span>
+              <span display="block" font-weight="600">Abuja, Nigeria</span>
+            </span>
+          </div>
+        </div>
+
+        <div rounded="3xl" bg="blue-900" dark-bg="blue-950" p="6" display="flex" flex-col gap="4">
+          <span text="#fff" font-weight="600">Find me elsewhere</span>
+          <div display="flex" gap="4">
+            <a href="https://github.com/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+              <i class="ri-github-fill" font-size="2xl"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+              <i class="ri-linkedin-box-fill" font-size="2xl"></i>
+            </a>
+            <a href="https://twitter.com/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+              <i class="ri-twitter-x-fill" font-size="2xl"></i>
+            </a>
+            <a href="https://dribbble.com/yourhandle" target="_blank" text="#fff/70" hover-text="#fff">
+              <i class="ri-dribbble-fill" font-size="2xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col md-flex-row justify="between" items="center" gap="4" border-t="1px" border-color="grey-200" dark-border-color="grey-800" mt="8">
+    <div display="flex" items="center" gap="2">
+      <img src="assets/images/avatar.png" w="8" h="8" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
+      <span text="text" font-size="md" font-weight="600">Cody</span>
+    </div>
+
+    <p text="grey-500" font-size="md">&copy; <span id="year"></span> Cody. All rights reserved.</p>
+
+    <div display="flex" gap="4">
+      <a href="https://github.com/yourhandle" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-github-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-linkedin-box-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://twitter.com/yourhandle" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+        <i class="ri-twitter-x-fill" font-size="2xl"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const iconLight = document.getElementById('theme-icon-light');
+    const iconDark = document.getElementById('theme-icon-dark');
+
+    function syncThemeIcon() {
+      const isDark = html.classList.contains('dark');
+      iconLight.setAttribute('display', isDark ? 'none' : 'flex');
+      iconDark.setAttribute('display', isDark ? 'flex' : 'none');
+    }
+    syncThemeIcon();
+
+    themeToggle.addEventListener('click', function () {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      syncThemeIcon();
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    let menuOpen = false;
+
+    function setMenu(open) {
+      menuOpen = open;
+      mobileMenu.setAttribute('display', open ? 'flex' : 'none');
+      menuIconOpen.setAttribute('display', open ? 'none' : 'flex');
+      menuIconClose.setAttribute('display', open ? 'flex' : 'none');
+    }
+
+    menuToggle.addEventListener('click', function () {
+      setMenu(!menuOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMenu(false);
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (menuOpen && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        setMenu(false);
+      }
+    });
+  </script>
+
+  <!-- Form handling -->
+  <script>
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = contactForm.name.value.trim();
+      const email = contactForm.email.value.trim();
+      const subject = contactForm.subject.value.trim() || 'New message from your site';
+      const message = contactForm.message.value.trim();
+
+      if (!name || !email || !message) return;
+
+      // Falls back to opening the user's email client with a pre-filled message.
+      // Swap this for a real form-submission endpoint (Formspree, your own API, etc.) when ready.
+      const body = `Name: ${name}%0AEmail: ${email}%0A%0A${encodeURIComponent(message)}`;
+      window.location.href = `mailto:adetayoinfo2004@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+      formStatus.textContent = "Opening your email client...";
+      formStatus.setAttribute('display', 'block');
+    });
+  </script>
+</body>
+</html>

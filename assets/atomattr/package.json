@@ -1,0 +1,25 @@
+{
+  "name": "atomattr",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./react": "./react/index.ts",
+    "./defaults.css": "./src/style-data/defaults.css"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.10",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
