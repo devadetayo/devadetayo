@@ -1,21 +1,159 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE-edge">
-  <title>Adeniyi Adetayo - Full-stack Web developer, Graphic Designer & Writer</title>
-  <link href="assets/atomattr/dist/assets/index-DStjo_oU.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/remixicon/remixicon.css" />
-  <link href="assets/css/main.css" rel="stylesheet">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0"
+  >
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Adeniyi Adetayo — Full-Stack Web Developer, Designer & Writer</title>
+
+  <meta
+    name="description"
+    content="Adeniyi Adetayo is a Nigerian full-stack web developer, UI designer and writer building websites, software, interfaces and developer tools."
+  >
+
+  <meta
+    name="author"
+    content="Adeniyi Adetayo"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <link
+    rel="canonical"
+    href="https://devadetayo.github.io/devadetayo/"
+  >
+
+  <!-- Open Graph -->
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Adeniyi Adetayo — Full-Stack Web Developer & Designer"
+  >
+
+  <meta
+    property="og:description"
+    content="Portfolio of Adeniyi Adetayo — full-stack web developer and UI designer"
+  >
+
+  <meta
+    property="og:url"
+    content="https://devadetayo.github.io/devadetayo/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://devadetayo.github.io/devadetayo/assets/images/avatar.png"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Adeniyi Adetayo"
+  >
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Adeniyi Adetayo — Full-Stack Web Developer & Designer"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Portfolio of Adeniyi Adetayo — full-stack web developer and UI designer."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://devadetayo.github.io/devadetayo/assets/images/avatar.png"
+  >
+
+  <meta
+    name="twitter:creator"
+    content="@devadetayo"
+  >
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/images/avatar.png"
+  >
+
+  <!-- Styles -->
+  <link
+    href="assets/atomattr/dist/assets/index-DStjo_oU.css"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/remixicon/remixicon.css"
+  >
+
+  <link
+    href="assets/css/main.css"
+    rel="stylesheet"
+  >
+
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/atomattr/dist/assets/index-DqZ65fpu.js"></script>
-  <!-- <script src="assets/js/main.js"></script> -->
 
+  <!-- Person / Profile structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://devadetayo.github.io/devadetayo/#profile",
+    "url": "https://devadetayo.github.io/devadetayo/",
+    "name": "Adeniyi Adetayo — Portfolio",
+    "description": "Portfolio of Adeniyi Adetayo, a full-stack web developer and UI designer.",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://devadetayo.github.io/devadetayo/#person",
+      "name": "Adeniyi Adetayo",
+      "alternateName": [
+        "Cody",
+        "devadetayo"
+      ],
+      "url": "https://devadetayo.github.io/devadetayo/",
+      "image": "https://devadetayo.github.io/devadetayo/assets/images/avatar.png",
+      "jobTitle": "Full-Stack Web Developer",
+      "description": "Full-stack web developer and UI designer building websites, software, interfaces and developer tools.",
+      "sameAs": [
+        "https://github.com/devadetayo",
+        "https://linkedin.com/in/devadetayo",
+        "https://x.com/devadetayo",
+        "https://dribbble.com/devadetayo"
+      ]
+    }
+  }
+  </script>
+
+  <!-- Your theme script -->
   <script>
-    // Apply saved theme before paint to avoid a flash
     (function () {
       const saved = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
+
       if (saved === 'dark' || (!saved && prefersDark)) {
         document.documentElement.classList.add('dark');
       }
@@ -97,11 +235,11 @@
 
       <div md-col-span="3" rounded="3xl" bg="purple-400" h="18rem" md-h="30rem" overflow="hidden" display="flex" flex-col gap="2" group>
         <div p="6" md-p="12" items="end" align="end">
-          <p>Anadex Properties</p>
+          <p>Ayaahub</p>
           <h3 font-size="xl" md-font-size="2xl" font-weight="700" text="text">Website</h3>
         </div>
-        <div mt="auto" w="full" group-hover-transform="scale(1.08)" duration="300ms" ease>
-          <img src="assets/images/mock-3.png">
+        <div mt="auto" min-h="32" w="full" flex="1" group-hover-transform="scale(1.08)" duration="300ms" ease>
+          <img src="assets/images/ayaahub.png" w="full" h="full" object="cover" object-position="left" ml="12" md-ml="20">
         </div>
       </div>
     </div>

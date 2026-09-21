@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+
+  <url>
+    <loc>https://devadetayo.github.io/devadetayo/</loc>
+  </url>
+
+  <url>
+    <loc>https://devadetayo.github.io/devadetayo/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://devadetayo.github.io/devadetayo/projects.html</loc>
+  </url>
+
+  <url>
+    <loc>https://devadetayo.github.io/devadetayo/blog.html</loc>
+  </url>
+
+  <url>
+    <loc>https://devadetayo.github.io/devadetayo/contact.html</loc>
+  </url>
+
+</urlset>
