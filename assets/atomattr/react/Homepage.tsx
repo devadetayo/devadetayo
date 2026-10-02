@@ -10,7 +10,7 @@ export default function Homepage() {
           <H1 mt="4" weight="black" className="hero-title">
             One AtomAttr contract
             <br />
-            <span text="primary">for HTML and React.</span>
+            <span text="purple-600">for HTML and React.</span>
           </H1>
           <Txt mt="4" text="muted" font-size="lg" line-height="relaxed">
             Attribute-driven styling that stays readable at any scale. Describe spacing, layout, and color

@@ -3,8 +3,20 @@
   src: url('../static/DMSans-VariableFont_opsz\,wght.ttf');
 }
 
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../static/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+}
 
 *{
   outline: none;
   font-family: "dm-sans", "Geist", "Poppins", "Inter", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.015em;
 }

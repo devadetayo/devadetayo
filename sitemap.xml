@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
-
-  <url>
-    <loc>https://devadetayo.github.io/devadetayo/</loc>
-  </url>
-
-  <url>
-    <loc>https://devadetayo.github.io/devadetayo/about.html</loc>
-  </url>
-
-  <url>
-    <loc>https://devadetayo.github.io/devadetayo/projects.html</loc>
-  </url>
-
-  <url>
-    <loc>https://devadetayo.github.io/devadetayo/blog.html</loc>
-  </url>
-
-  <url>
-    <loc>https://devadetayo.github.io/devadetayo/contact.html</loc>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://devadetayo.github.io/</loc></url>
+  <url><loc>https://devadetayo.github.io/about.html</loc></url>
+  <url><loc>https://devadetayo.github.io/projects.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog.html</loc></url>
+  <url><loc>https://devadetayo.github.io/contact.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/building-a-real-estate-app-from-the-ground-up.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/building-before-i-felt-ready.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/designing-the-details-people-dont-notice.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/from-idea-to-interface.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/from-idea-to-launch-what-it-takes-to-ship.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/i-want-to-css-battle-kyle-cook-and-kevin-powell.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/why-i-started-building-my-own-css-framework.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/my-approach-to-building-simple-interfaces.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/website-vs-product-design.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/what-building-a-real-product-taught-me-about-ui-design.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/why-good-ui-takes-more-than-writing-css.html</loc></url>
+  <url><loc>https://devadetayo.github.io/blog/why-i-prefer-attribute-based-styling.html</loc></url>
 </urlset>

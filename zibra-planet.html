@@ -133,45 +133,46 @@
     })();
   </script>
 </head>
-<body bg="grey-50" dark-bg="grey-950" data-project-id="zibra-planet">
+<body bg="#fff" dark-bg="grey-950" data-project-id="zibra-planet">
   <header py="4" px="4" md-px="12" lg-px="16" w="full" display="flex" fixed top="0" left="0" z="50">
-    <nav p="2" md-p="3" bg="#fff/50" dark-bg="#000/50" backdrop-blur="4px" rounded="full" display="flex" justify="between" w="full" relative>
-      <a href="index.html" display="flex" items="center" gap="2">
-        <img src="assets/images/avatar.png" w="9" h="9" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
-        <span display="none" md-display="flex" text="text" font-size="lg" font-weight="700">Cody</span>
+    <nav display="flex" justify="between" items="center" w="full" gap="4">
+      <a href="index.html" display="flex" items="center" gap="2" border="1.5px" border-color="grey-200" dark-border-color="grey-900" rounded="full" p="1px" shadow="md" bg="#fff/70" dark-bg="grey-900/70" hover-bg="#fff/80" dark-hover-bg="grey-900/80">
+        <img src="assets/images/avatar.png" w="10" h="10" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
       </a>
 
-      <div gap="1" display="none" md-display="flex" items="center">
-        <a href="about.html" py="2" px="3" font-size="md" display="flex" items="center">About</a>
-        <a href="projects.html" py="2" px="3" font-size="md" display="flex" items="center" text="blue-900" dark-text="blue-500" font-weight="600">Projects</a>
-        <a href="blog.html" py="2" px="3" font-size="md" display="flex" items="center">Blog</a>
-        <a href="contact.html" py="2" px="3" font-size="md" display="flex" items="center">Contact</a>
+      <div gap="1" display="none" md-display="flex" items="center" bg="#fff/70" py="2" px="3" rounded="full" dark-bg="grey-900/70" shadow="md" border="1px" border-color="grey-200" dark-border-color="grey-800">
+        <a href="about.html" py="1" px="3" font-size="md" display="flex" items="center">About</a>
+        <a href="projects.html" py="1" px="3" font-size="md" display="flex" items="center" text="purple-600" dark-text="purple-500" font-weight="600" aria-current="page">Projects</a>
+        <a href="blog.html" py="1" px="3" font-size="md" display="flex" items="center">Blog</a>
+        <a href="contact.html" py="1" px="3" font-size="md" display="flex" items="center">Contact</a>
       </div>
 
       <div display="flex" items="center" gap="2">
-        <button id="theme-toggle" type="button" display="flex" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
+
+        <button id="menu-toggle" type="button" display="flex" md-display="none" items="center" justify="center" bg="#fff/70" p="2.5" rounded="full" dark-bg="grey-900/70" shadow="md" border="1px" border-color="grey-200" dark-border-color="grey-800" cursor="pointer" aspect="1" w="12" h="12">
+          <i id="menu-icon-open" class="ri-menu-3-line" font-size="lg" ></i>
+          <i id="menu-icon-close" class="ri-close-line" font-size="lg" display="none"></i>
+        </button>
+        <button id="theme-toggle" type="button" items="center" bg="#fff/70" py="2.5" px="3" rounded="full" dark-bg="grey-900/70" shadow="md" border="1px" border-color="grey-200" dark-border-color="grey-800" cursor="pointer" aspect="1" w="12" h="12">
           <i id="theme-icon-light" class="ri-sun-line" font-size="lg"></i>
           <i id="theme-icon-dark" class="ri-moon-line" font-size="lg" display="none"></i>
         </button>
-
-        <button id="menu-toggle" type="button" display="flex" md-display="none" items="center" justify="center" p="2.5" bg="grey-100" dark-bg="grey-900" rounded="full" border="none" cursor="pointer">
-          <i id="menu-icon-open" class="ri-menu-3-line" font-size="lg"></i>
-          <i id="menu-icon-close" class="ri-close-line" font-size="lg" display="none"></i>
-        </button>
       </div>
 
-      <div id="mobile-menu" display="none" md-display="none" absolute top="100%" left="0" mt="2" w="full" bg="#fff" dark-bg="grey-950" rounded="2xl" p="2" flex-col gap="1" shadow="lg">
-        <a href="about.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">About</a>
-        <a href="projects.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Projects</a>
-        <a href="blog.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Blog</a>
-        <a href="contact.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Contact</a>
+      <div id="mobile-menu" display="none" md-display="none" absolute top="100%" left="0" mt="2" w="full" px="4">
+        <div bg="#fff/90" dark-bg="grey-950/90" rounded="2xl" display="flex" p="2" flex-col gap="1" shadow="lg" w="full" backdrop-filter="8px" border="1px" border-color="grey-200" dark-border-color="grey-800">
+          <a href="about.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">About</a>
+          <a href="projects.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center" text="purple-600" dark-text="purple-500" font-weight="600" aria-current="page">Projects</a>
+          <a href="blog.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Blog</a>
+          <a href="contact.html" py="3" px="4" font-size="md" rounded="xl" display="flex" items="center">Contact</a>
+        </div>
       </div>
     </nav>
   </header>
 
   <!-- Back link -->
   <div px="4" md-px="12" lg-px="16" pt="24" display="flex">
-    <a href="projects.html" display="flex" items="center" gap="2" text="grey-500" hover-text="blue-900" dark-hover-text="blue-500" font-size="sm" font-weight="600">
+    <a href="projects.html" display="flex" items="center" gap="2" text="grey-500" hover-text="blue-900" dark-hover-text="purple-600" font-size="sm" font-weight="600">
       <i class="ri-arrow-left-line" font-size="lg"></i> Back to projects
     </a>
   </div>
@@ -180,12 +181,12 @@
   <div py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col>
     <div grid md-grid-cols="9" gap="8" md-gap="12" w="full" items="center">
 
-      <div md-col-span="5" rounded="3xl" bg="emerald-400" h="14rem" md-h="28rem" overflow="hidden">
+      <div md-col-span="5" rounded="3xl" bg="green-300" h="14rem" md-h="28rem" overflow="hidden">
         <img src="assets/images/zibraplanet.png" w="full" h="full" object="contain" mt="8" ml="8" md-ml="12" md-mt="12">
       </div>
 
       <div md-col-span="4" display="flex" flex-col gap="4">
-        <span text="blue-900" dark-text="blue-500" font-size="sm" font-weight="700" tracking="0.1">WEBSITE</span>
+        <span text="purple-600" dark-text="purple-500" font-size="sm" font-weight="700" tracking="0.1">WEBSITE</span>
         <h1 font-size="2xl" md-font-size="3xl" font-weight="700">Zibra Planet Ltd.</h1>
         <p text="grey-600" dark-text="grey-400" md-font-size="lg">
           A business website built for Zibra Planet Ltd., focused on clarity and a strong brand presence.
@@ -196,7 +197,7 @@
         </div>
 
         <div display="flex" gap="3" mt="2" wrap>
-          <a href="#" target="_blank" display="flex" items="center" gap="2" bg="blue-900" dark-bg="blue-600" text="#fff" font-weight="600" px="5" py="2.5" rounded="full">
+          <a href="#" target="_blank" display="flex" items="center" gap="2" bg="purple-600" text="#fff" font-weight="600" px="5" py="2.5" rounded="full">
             Visit site <i class="ri-arrow-right-up-line" font-size="lg"></i>
           </a>
           <a href="https://github.com/devadetayo" target="_blank" display="flex" items="center" gap="2" border="1.5px" border-color="grey-200" dark-border-color="grey-800" font-weight="600" px="5" py="2.5" rounded="full">
@@ -252,16 +253,16 @@
       w="full"
       style="scroll-snap-type: x mandatory;"
     >
-      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="emerald-400" style="scroll-snap-align: start;" p="6">
+      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="green-300" style="scroll-snap-align: start;" p="6">
         <img src="assets/images/projects/zibraplanet-mobile-1.png" w="full" h="full" object="contain" rounded="2.5rem">
       </div>
-      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="emerald-400" style="scroll-snap-align: start;" p="6">
+      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="green-300" style="scroll-snap-align: start;" p="6">
         <img src="assets/images/projects/zibraplanet-mobile-2.png" w="full" h="full" object="contain" rounded="2.5rem">
       </div>
-      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="emerald-400" style="scroll-snap-align: start;" p="6">
+      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="green-300" style="scroll-snap-align: start;" p="6">
         <img src="assets/images/projects/zibraplanet-mobile-3.png" w="full" h="full" object="contain" rounded="2.5rem">
       </div>
-      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="emerald-400" style="scroll-snap-align: start;" p="6">
+      <div flex="1" display="flex" w="70vw" min-w="70vw" h="30rem" rounded="3xl" overflow="hidden" bg="green-300" style="scroll-snap-align: start;" p="6">
         <img src="assets/images/projects/zibraplanet-mobile-4.png" w="full" h="full" object="contain" rounded="2.5rem">
       </div>
     </div>
@@ -278,16 +279,16 @@
       w="full"
       style="scroll-snap-type: x mandatory;"
     >
-      <div flex="1" display="flex" min-w="40vw" w="40vw" h="20rem" rounded="2xl" overflow="hidden" p="8" bg="emerald-400" style="scroll-snap-align: start;">
+      <div flex="1" display="flex" min-w="40vw" w="40vw" h="20rem" rounded="2xl" overflow="hidden" p="8" bg="green-300" style="scroll-snap-align: start;">
         <img src="assets/images/projects/zibraplanet-desktop-4.png" w="full" h="full" object="contain">
       </div>
-      <div flex="1" display="flex" min-w="40vw" w="40vw" h="20rem" rounded="2xl" overflow="hidden" p="8" bg="emerald-400" style="scroll-snap-align: start;">
+      <div flex="1" display="flex" min-w="40vw" w="40vw" h="20rem" rounded="2xl" overflow="hidden" p="8" bg="green-300" style="scroll-snap-align: start;">
         <img src="assets/images/projects/zibraplanet-desktop-3.png" w="full" h="full" object="contain">
       </div>
-      <div flex="1" display="flex" min-w="40vw" w="40vw" h="20rem" rounded="2xl" overflow="hidden" p="8" bg="emerald-400" style="scroll-snap-align: start;">
+      <div flex="1" display="flex" min-w="40vw" w="40vw" h="20rem" rounded="2xl" overflow="hidden" p="8" bg="green-300" style="scroll-snap-align: start;">
         <img src="assets/images/projects/zibraplanet-desktop-2.png" w="full" h="full" object="contain">
       </div>
-      <div flex="1" display="flex" min-w="40vw" w="40vw" h="20rem" rounded="2xl" overflow="hidden" p="8" bg="emerald-400" style="scroll-snap-align: start;">
+      <div flex="1" display="flex" min-w="40vw" w="40vw" h="20rem" rounded="2xl" overflow="hidden" p="8" bg="green-300" style="scroll-snap-align: start;">
         <img src="assets/images/projects/zibraplanet-desktop-1.png" w="full" h="full" object="contain">
       </div>
     </div>
@@ -316,25 +317,31 @@
   </div>
 
   <!-- Footer -->
-  <footer py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col md-flex-row justify="between" items="center" gap="4" border-t="1px" border-color="grey-200" dark-border-color="grey-800" mt="8">
-    <div display="flex" items="center" gap="2">
-      <img src="assets/images/avatar.png" w="8" h="8" rounded="full" border="1.5px" border-color="grey-50" dark-border-color="grey-900">
-      <span text="text" font-size="md" font-weight="600">Cody</span>
-    </div>
-
-    <p text="grey-500" font-size="md">&copy; <span id="year"></span> Cody. All rights reserved.</p>
+  <footer py="8" px="4" md-px="12" lg-px="16" display="flex" flex-col md-flex-row justify="between" items="center" gap="4" mt="8" md-mt="16" align="center">
 
     <div display="flex" gap="4">
-      <a href="https://github.com/devadetayo" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+      <a href="https://github.com/devadetayo" target="_blank" text="grey-500" hover-text="purple-600" dark-hover-text="purple-600">
         <i class="ri-github-fill" font-size="2xl"></i>
       </a>
-      <a href="https://linkedin.com/in/devadetayo" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+      <a href="https://linkedin.com/in/devadetayo" target="_blank" text="grey-500" hover-text="purple-600" dark-hover-text="purple-600">
         <i class="ri-linkedin-box-fill" font-size="2xl"></i>
       </a>
-      <a href="https://x.com/devadetayo" target="_blank" text="grey-500" hover-text="blue-500" dark-hover-text="blue-500">
+      <a href="https://x.com/devadetayo" target="_blank" text="grey-500" hover-text="purple-600" dark-hover-text="purple-600">
         <i class="ri-twitter-x-fill" font-size="2xl"></i>
       </a>
+      <a href="https://www.youtube.com/@Codyconor" target="_blank" rel="noopener noreferrer" aria-label="Adeniyi Adetayo on YouTube" text="grey-500" hover-text="purple-600" dark-hover-text="purple-600">
+        <i class="ri-youtube-fill" font-size="2xl"></i>
+      </a>
+      <a href="https://codepen.io/devadetayo" target="_blank" rel="noopener noreferrer" aria-label="Adeniyi Adetayo on CodePen" text="grey-500" hover-text="purple-600" dark-hover-text="purple-600">
+        <i class="ri-codepen-fill" font-size="2xl"></i>
+      </a>
+
+      <a href="https://dribbble.com/devadetayo" target="_blank" text="grey-500" hover-text="purple-600" dark-hover-text="purple-600">
+        <i class="ri-dribbble-fill" font-size="2xl"></i>
+      </a>
     </div>
+
+    <p text="grey-600" dark-text="grey-500">&copy; <span id="year"></span> Adeniyi Adetayo (Cody). All rights reserved.</p>
   </footer>
 
   <!-- Floating stats bar: view count, clickable like, year, share -->
@@ -429,8 +436,8 @@
 
     function syncThemeIcon() {
       const isDark = html.classList.contains('dark');
-      iconLight.setAttribute('display', isDark ? 'none' : 'flex');
-      iconDark.setAttribute('display', isDark ? 'flex' : 'none');
+      iconLight.setAttribute('display', isDark ? 'none' : 'block');
+      iconDark.setAttribute('display', isDark ? 'block' : 'none');
     }
     syncThemeIcon();
 
